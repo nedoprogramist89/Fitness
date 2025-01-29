@@ -1,0 +1,67 @@
+﻿<Window x:Class="Fitnes.DirectorWindowOtcheti"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Формирование отчетов" WindowState="Maximized" Background="#FFFDEFD4" Height="1080" Width="1080">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <DockPanel LastChildFill="False" Background="#FFF8DC" Height="50" VerticalAlignment="Center" Grid.ColumnSpan="2">
+            <Button
+IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+ToolTip="MaterialDesignFloatingActionSecondaryButton"
+Width="55"
+Height="50"
+Click="Button_Click"
+   
+Background="#FCC874">
+                <materialDesign:PackIcon Kind="ArrowLeft" />
+            </Button>
+
+            <TextBlock 
+           VerticalAlignment="Center" 
+           FontSize="16" 
+           FontWeight="SemiBold" 
+           Foreground="#CCA15D" 
+           Margin="10,0" ><Run Text="Формирование отчетов"/></TextBlock>
+            
+        </DockPanel>
+
+        <!-- Левая часть с DataGrid -->
+        <DataGrid Grid.Column="0" Margin="0,0,20,20" Background="#FFE9A3" IsReadOnly="true"
+                  ItemsSource="{Binding ReportData}" AutoGenerateColumns="True" Grid.Row="1" />
+
+        <Grid Grid.Row="1" Grid.Column="1" Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel VerticalAlignment="Top"  Height="196" Margin="10,10,10,0">
+                <ComboBox
+    x:Name="ComboBoxReports"
+    Margin="0,5"
+    Style="{StaticResource MaterialDesignOutlinedComboBox}"
+    Background="White"
+    SelectionChanged="ComboBoxReports_SelectionChanged">
+                    <ComboBoxItem Content="Загрузка техники"/>
+                    <ComboBoxItem Content="Доходы"/>
+                    <ComboBoxItem Content="Состояние парка"/>
+                    <ComboBoxItem Content="График техобслуживания" />
+                    <ComboBoxItem Content="Договоры аренды" />
+
+                </ComboBox>
+
+                <Button Content="Сформировать отчет" Height="40" Margin="0,20,0,0" Background="#FCC874" FontSize="16" FontWeight="Bold" BorderThickness="0" Foreground="Black" 
+                        Click="ButtonGenerateReport_Click"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

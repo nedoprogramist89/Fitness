@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище FitnesModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Clients">
+    <Key>
+      <PropertyRef Name="ID_Clients" />
+    </Key>
+    <Property Name="ID_Clients" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CompanyName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PhoneNumber" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="Address" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ContractNumber" Type="int" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ContactPersonName" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="ContactPersonSurname" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="ContactPersonMiddlename" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="Employees">
+    <Key>
+      <PropertyRef Name="ID_Employees" />
+    </Key>
+    <Property Name="ID_Employees" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeeName" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="EmployeeSurname" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="EmployeeMiddlename" Type="varchar" MaxLength="25" />
+    <Property Name="PhoneNumber" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="JobTitle_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="JobTitle">
+    <Key>
+      <PropertyRef Name="ID_JobTitle" />
+    </Key>
+    <Property Name="ID_JobTitle" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JobTitle" Type="varchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Maintenance">
+    <Key>
+      <PropertyRef Name="ID_Maintenance" />
+    </Key>
+    <Property Name="ID_Maintenance" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaintenanceDate" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="TypeOfWork" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="MaintenanceStatus_ID" Type="int" Nullable="false" />
+    <Property Name="Technique_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MaintenanceStatus">
+    <Key>
+      <PropertyRef Name="ID_MaintenanceStatus" />
+    </Key>
+    <Property Name="ID_MaintenanceStatus" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaintenanceStatus" Type="varchar" MaxLength="25" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Orders">
+    <Key>
+      <PropertyRef Name="ID_Order" />
+    </Key>
+    <Property Name="ID_Order" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderNumber" Type="int" Nullable="false" />
+    <Property Name="Clients_ID" Type="int" Nullable="false" />
+    <Property Name="Technique_ID" Type="int" Nullable="false" />
+    <Property Name="DateOfIssue" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="ReturnDate" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="Price" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="OrderStatus_ID" Type="int" Nullable="false" />
+    <Property Name="RentalPeriod" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="Employees_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OrderStatus">
+    <Key>
+      <PropertyRef Name="ID_OrderStatus" />
+    </Key>
+    <Property Name="ID_OrderStatus" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderStatus" Type="varchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityType Name="States">
+    <Key>
+      <PropertyRef Name="ID_State" />
+    </Key>
+    <Property Name="ID_State" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="States" Type="varchar" MaxLength="25" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Technique">
+    <Key>
+      <PropertyRef Name="ID_Technique" />
+    </Key>
+    <Property Name="ID_Technique" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TechnicianNumber" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="TechniqueName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TechniqueModel" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="YearOfManufacture" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="RentalCost" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="State_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Employees__JobTi__4BAC3F29">
+    <End Role="JobTitle" Type="Self.JobTitle" Multiplicity="1" />
+    <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JobTitle">
+        <PropertyRef Name="ID_JobTitle" />
+      </Principal>
+      <Dependent Role="Employees">
+        <PropertyRef Name="JobTitle_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Maintenan__Maint__5EBF139D">
+    <End Role="MaintenanceStatus" Type="Self.MaintenanceStatus" Multiplicity="1" />
+    <End Role="Maintenance" Type="Self.Maintenance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MaintenanceStatus">
+        <PropertyRef Name="ID_MaintenanceStatus" />
+      </Principal>
+      <Dependent Role="Maintenance">
+        <PropertyRef Name="MaintenanceStatus_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Maintenan__Techn__5FB337D6">
+    <End Role="Technique" Type="Self.Technique" Multiplicity="1" />
+    <End Role="Maintenance" Type="Self.Maintenance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Technique">
+        <PropertyRef Name="ID_Technique" />
+      </Principal>
+      <Dependent Role="Maintenance">
+        <PropertyRef Name="Technique_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Orders__Clients___571DF1D5">
+    <End Role="Clients" Type="Self.Clients" Multiplicity="1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clients">
+        <PropertyRef Name="ID_Clients" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="Clients_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Orders__Employee__59FA5E80">
+    <End Role="Employees" Type="Self.Employees" Multiplicity="1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="ID_Employees" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="Employees_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Orders__OrderSta__59063A47">
+    <End Role="OrderStatus" Type="Self.OrderStatus" Multiplicity="1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrderStatus">
+        <PropertyRef Name="ID_OrderStatus" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="OrderStatus_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Orders__Techniqu__5812160E">
+    <End Role="Technique" Type="Self.Technique" Multiplicity="1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Technique">
+        <PropertyRef Name="ID_Technique" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="Technique_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Technique__State__5441852A">
+    <End Role="States" Type="Self.States" Multiplicity="1" />
+    <End Role="Technique" Type="Self.Technique" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="States">
+        <PropertyRef Name="ID_State" />
+      </Principal>
+      <Dependent Role="Technique">
+        <PropertyRef Name="State_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище FitnesModelContainer">
+    <EntitySet Name="Clients" EntityType="Self.Clients" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employees" EntityType="Self.Employees" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="JobTitle" EntityType="Self.JobTitle" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Maintenance" EntityType="Self.Maintenance" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MaintenanceStatus" EntityType="Self.MaintenanceStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OrderStatus" EntityType="Self.OrderStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="States" EntityType="Self.States" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Technique" EntityType="Self.Technique" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Employees__JobTi__4BAC3F29" Association="Self.FK__Employees__JobTi__4BAC3F29">
+      <End Role="JobTitle" EntitySet="JobTitle" />
+      <End Role="Employees" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Maintenan__Maint__5EBF139D" Association="Self.FK__Maintenan__Maint__5EBF139D">
+      <End Role="MaintenanceStatus" EntitySet="MaintenanceStatus" />
+      <End Role="Maintenance" EntitySet="Maintenance" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Maintenan__Techn__5FB337D6" Association="Self.FK__Maintenan__Techn__5FB337D6">
+      <End Role="Technique" EntitySet="Technique" />
+      <End Role="Maintenance" EntitySet="Maintenance" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Orders__Clients___571DF1D5" Association="Self.FK__Orders__Clients___571DF1D5">
+      <End Role="Clients" EntitySet="Clients" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Orders__Employee__59FA5E80" Association="Self.FK__Orders__Employee__59FA5E80">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Orders__OrderSta__59063A47" Association="Self.FK__Orders__OrderSta__59063A47">
+      <End Role="OrderStatus" EntitySet="OrderStatus" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Orders__Techniqu__5812160E" Association="Self.FK__Orders__Techniqu__5812160E">
+      <End Role="Technique" EntitySet="Technique" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Technique__State__5441852A" Association="Self.FK__Technique__State__5441852A">
+      <End Role="States" EntitySet="States" />
+      <End Role="Technique" EntitySet="Technique" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,42 @@
+﻿<Window x:Class="Fitnes.DirectorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Название окна" WindowState="Maximized" Background="#FFFDEFD4" Height="1080" Width="1080">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <DockPanel LastChildFill="False" Background="#F4B06A" Height="47" VerticalAlignment="Center" HorizontalAlignment="Left" Width="52">
+            <Button
+IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+ToolTip="MaterialDesignFloatingActionSecondaryButton"
+Width="52"
+Height="47"
+Click="Button_Click_5"
+   
+Background="#FCC874">
+                <materialDesign:PackIcon Kind="ArrowLeft" />
+            </Button>
+        </DockPanel>
+
+        <Grid Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Руководитель" Grid.Row="0" FontSize="30" FontWeight="Bold" Foreground="#CCA15D" HorizontalAlignment="Center" Margin="0,-95,0,79" Width="206"/>
+
+            <Button Content="Таблица с заказами" Height="50" Width="266" Background="#FCC874" FontSize="16" FontWeight="Bold" BorderThickness="0" Foreground="Black" Grid.Row="0" Click="Button_Click_2"/>
+            <Button Content="Таблица с тех обслуживанием" Height="50" Width="266" Background="#FCC874" FontSize="16" FontWeight="Bold" BorderThickness="0" Foreground="Black" Grid.Row="2" Click="Button_Click_3"/>
+            <Button Content="Таблица с отчётами" Height="50" Width="266" Background="#FCC874" FontSize="16" FontWeight="Bold" BorderThickness="0" Foreground="Black" Grid.Row="4" Click="Button_Click_4"/>
+        </Grid>
+    </Grid>
+</Window>

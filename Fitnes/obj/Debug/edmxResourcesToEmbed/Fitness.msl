@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище FitnesModelContainer" CdmEntityContainer="FitnesEntities1">
+    <EntitySetMapping Name="Clients">
+      <EntityTypeMapping TypeName="FitnesModel.Clients">
+        <MappingFragment StoreEntitySet="Clients">
+          <ScalarProperty Name="ID_Clients" ColumnName="ID_Clients" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="ContractNumber" ColumnName="ContractNumber" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="ContactPersonName" ColumnName="ContactPersonName" />
+          <ScalarProperty Name="ContactPersonSurname" ColumnName="ContactPersonSurname" />
+          <ScalarProperty Name="ContactPersonMiddlename" ColumnName="ContactPersonMiddlename" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="FitnesModel.Employees">
+        <MappingFragment StoreEntitySet="Employees">
+          <ScalarProperty Name="ID_Employees" ColumnName="ID_Employees" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="EmployeeSurname" ColumnName="EmployeeSurname" />
+          <ScalarProperty Name="EmployeeMiddlename" ColumnName="EmployeeMiddlename" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="JobTitle_ID" ColumnName="JobTitle_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JobTitle">
+      <EntityTypeMapping TypeName="FitnesModel.JobTitle">
+        <MappingFragment StoreEntitySet="JobTitle">
+          <ScalarProperty Name="ID_JobTitle" ColumnName="ID_JobTitle" />
+          <ScalarProperty Name="JobTitle1" ColumnName="JobTitle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Maintenance">
+      <EntityTypeMapping TypeName="FitnesModel.Maintenance">
+        <MappingFragment StoreEntitySet="Maintenance">
+          <ScalarProperty Name="ID_Maintenance" ColumnName="ID_Maintenance" />
+          <ScalarProperty Name="MaintenanceDate" ColumnName="MaintenanceDate" />
+          <ScalarProperty Name="TypeOfWork" ColumnName="TypeOfWork" />
+          <ScalarProperty Name="MaintenanceStatus_ID" ColumnName="MaintenanceStatus_ID" />
+          <ScalarProperty Name="Technique_ID" ColumnName="Technique_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MaintenanceStatus">
+      <EntityTypeMapping TypeName="FitnesModel.MaintenanceStatus">
+        <MappingFragment StoreEntitySet="MaintenanceStatus">
+          <ScalarProperty Name="ID_MaintenanceStatus" ColumnName="ID_MaintenanceStatus" />
+          <ScalarProperty Name="MaintenanceStatus1" ColumnName="MaintenanceStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orders">
+      <EntityTypeMapping TypeName="FitnesModel.Orders">
+        <MappingFragment StoreEntitySet="Orders">
+          <ScalarProperty Name="ID_Order" ColumnName="ID_Order" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="Clients_ID" ColumnName="Clients_ID" />
+          <ScalarProperty Name="Technique_ID" ColumnName="Technique_ID" />
+          <ScalarProperty Name="DateOfIssue" ColumnName="DateOfIssue" />
+          <ScalarProperty Name="ReturnDate" ColumnName="ReturnDate" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="OrderStatus_ID" ColumnName="OrderStatus_ID" />
+          <ScalarProperty Name="RentalPeriod" ColumnName="RentalPeriod" />
+          <ScalarProperty Name="Employees_ID" ColumnName="Employees_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderStatus">
+      <EntityTypeMapping TypeName="FitnesModel.OrderStatus">
+        <MappingFragment StoreEntitySet="OrderStatus">
+          <ScalarProperty Name="ID_OrderStatus" ColumnName="ID_OrderStatus" />
+          <ScalarProperty Name="OrderStatus1" ColumnName="OrderStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="States">
+      <EntityTypeMapping TypeName="FitnesModel.States">
+        <MappingFragment StoreEntitySet="States">
+          <ScalarProperty Name="ID_State" ColumnName="ID_State" />
+          <ScalarProperty Name="States1" ColumnName="States" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Technique">
+      <EntityTypeMapping TypeName="FitnesModel.Technique">
+        <MappingFragment StoreEntitySet="Technique">
+          <ScalarProperty Name="ID_Technique" ColumnName="ID_Technique" />
+          <ScalarProperty Name="TechnicianNumber" ColumnName="TechnicianNumber" />
+          <ScalarProperty Name="TechniqueName" ColumnName="TechniqueName" />
+          <ScalarProperty Name="TechniqueModel" ColumnName="TechniqueModel" />
+          <ScalarProperty Name="YearOfManufacture" ColumnName="YearOfManufacture" />
+          <ScalarProperty Name="RentalCost" ColumnName="RentalCost" />
+          <ScalarProperty Name="State_ID" ColumnName="State_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,117 @@
+﻿<Window x:Class="Fitnes.AdminOrder"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Управление заказами" WindowState="Maximized" Background="#FFFDEFD4" Height="1080" Width="1080">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <DockPanel LastChildFill="False" Background="#FFF8DC" Height="50" VerticalAlignment="Center" Grid.ColumnSpan="2">
+            <Button
+IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+ToolTip="MaterialDesignFloatingActionSecondaryButton"
+Width="55"
+Height="50"
+Click="Button_Click"
+   
+Background="#FCC874">
+                <materialDesign:PackIcon Kind="ArrowLeft" />
+            </Button>
+
+            <TextBlock 
+           VerticalAlignment="Center" 
+           FontSize="16" 
+           FontWeight="SemiBold" 
+           Foreground="#CCA15D" 
+           Margin="10,0" ><Run Text="Управление заказами"/></TextBlock>
+            <Button IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource AncestorType={x:Type Window}, Mode=FindAncestor}}"
+            ToolTip="MaterialDesignFloatingActionSecondaryButton"
+            Click="Button_Click_1"
+            DockPanel.Dock="Right"
+            Width="60"
+            Background="#FCC874" Height="50">
+            <materialDesign:PackIcon 
+                Kind="DeleteOutline"
+                Height="31"
+                Width="55"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center" />
+            </Button>
+        </DockPanel>
+
+        <DataGrid Grid.Row="1" Grid.Column="0" Margin="0,0,20,20" Background="#FFE9A3" IsReadOnly="true"
+          ItemsSource="{Binding Orders}" SelectedItem="{Binding SelectedOrder, Mode=TwoWay}" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Номер заказа" Binding="{Binding OrderNumber}"/>
+                <DataGridTextColumn Header="Клиент" Binding="{Binding Clients.CompanyName}"/>
+                <DataGridTextColumn Header="Техника" Binding="{Binding Technique.TechniqueName}"/>
+                <DataGridTextColumn Header="Дата выдачи" Binding="{Binding DateOfIssue}"/>
+                <DataGridTextColumn Header="Дата возврата" Binding="{Binding ReturnDate}"/>
+                <DataGridTextColumn Header="Цена" Binding="{Binding Price}"/>
+                <DataGridTextColumn Header="Статус заказа" Binding="{Binding OrderStatus.OrderStatus1}"/>
+                <DataGridTextColumn Header="Период аренды" Binding="{Binding RentalPeriod}"/>
+                <DataGridTextColumn Header="Сотрудник" Binding="{Binding Employees.EmployeeName}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Grid Grid.Row="1" Grid.Column="1" Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel VerticalAlignment="Top" Margin="10">
+                <TextBox x:Name="TextBoxOrderNumber" Height="30" Margin="0,5" Background="White" BorderBrush="White"  />
+                <ComboBox
+                x:Name="ComboBoxClients"
+                Margin="0,5"
+                Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                Background="White"
+                DisplayMemberPath="CompanyName"
+                SelectedValuePath="ID_Clients"
+                SelectedValue="{Binding Clients_ID}">
+                </ComboBox>
+                <ComboBox
+                x:Name="ComboBoxTechnique"
+                Margin="0,5"
+                Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                Background="White"
+                DisplayMemberPath="TechniqueName"
+                SelectedValuePath="ID_Technique"
+                SelectedValue="{Binding Technique_ID}">
+                </ComboBox>
+                <TextBox x:Name="TextBoxDateOfIssue" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
+                <TextBox x:Name="TextBoxReturnDate" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
+                <TextBox x:Name="TextBoxPrice" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
+                <ComboBox
+x:Name="ComboBoxOrderStatus"
+Margin="0,5"
+ Style="{StaticResource MaterialDesignOutlinedComboBox}"
+ Background="White"
+ DisplayMemberPath="OrderStatus1"
+ SelectedValuePath="ID_OrderStatus"
+ SelectedValue="{Binding OrderStatus_ID}">
+                </ComboBox>
+                <TextBox x:Name="TextBoxRentalPeriod" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
+                <ComboBox
+x:Name="ComboBoxEmployees"
+Margin="0,5"
+ Style="{StaticResource MaterialDesignOutlinedComboBox}"
+ Background="White"
+ DisplayMemberPath="EmployeeName"
+ SelectedValuePath="ID_Employees"
+ SelectedValue="{Binding Employees_ID}">
+                </ComboBox>
+                <Button Content="Добавление" Height="40" Margin="0,20,0,0" Background="#FCC874" FontSize="16" FontWeight="Bold" BorderThickness="0" Foreground="Black" Click="ButtonAdd_Click"/>
+                <Button Content="Изменение" Height="40" Margin="0,20,0,0" Background="#FCC874" FontSize="16" FontWeight="Bold" BorderThickness="0" Foreground="Black" Click="ButtonEdit_Click"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="154bded56797412486b16ffa1940e840" Name="Diagram1" ZoomLevel="10">
+        <EntityTypeShape EntityType="FitnesModel.Clients" Width="1.5" PointX="3" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FitnesModel.Employees" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FitnesModel.JobTitle" Width="1.5" PointX="0.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FitnesModel.Maintenance" Width="1.5" PointX="5.25" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FitnesModel.MaintenanceStatus" Width="1.5" PointX="3" PointY="17.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FitnesModel.Orders" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="FitnesModel.OrderStatus" Width="1.5" PointX="3" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FitnesModel.States" Width="1.5" PointX="0.75" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FitnesModel.Technique" Width="1.5" PointX="3" PointY="12.625" IsExpanded="true" />
+        <AssociationConnector Association="FitnesModel.FK__Orders__Clients___571DF1D5" ManuallyRouted="false" />
+        <AssociationConnector Association="FitnesModel.FK__Employees__JobTi__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="FitnesModel.FK__Orders__Employee__59FA5E80" ManuallyRouted="false" />
+        <AssociationConnector Association="FitnesModel.FK__Maintenan__Maint__5EBF139D" ManuallyRouted="false" />
+        <AssociationConnector Association="FitnesModel.FK__Maintenan__Techn__5FB337D6" ManuallyRouted="false" />
+        <AssociationConnector Association="FitnesModel.FK__Orders__OrderSta__59063A47" ManuallyRouted="false" />
+        <AssociationConnector Association="FitnesModel.FK__Orders__Techniqu__5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="FitnesModel.FK__Technique__State__5441852A" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

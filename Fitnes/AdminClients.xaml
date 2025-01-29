@@ -1,0 +1,98 @@
+﻿<Window x:Class="Fitnes.AdminClients"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Управление клиентами" WindowState="Maximized" Background="#FFF8D6" MinHeight="780" MinWidth="1080">
+    <Grid>
+    
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+    
+        <DockPanel LastChildFill="False" Background="#FFF8DC" Height="50" VerticalAlignment="Center" Grid.ColumnSpan="2">
+            
+            <Button
+    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+    ToolTip="MaterialDesignFloatingActionSecondaryButton"
+    Width="55"
+    Height="50"
+    Click="Button_Click"
+   
+    Background="#FCC874">
+                <materialDesign:PackIcon Kind="ArrowLeft" />
+            </Button>
+
+         
+            <TextBlock Text="Управление клиентами" 
+               VerticalAlignment="Center" 
+               FontSize="16" 
+               FontWeight="SemiBold" 
+               Foreground="#CCA15D" 
+               Margin="10,0" />
+            <Button
+    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource AncestorType={x:Type Window}, Mode=FindAncestor}}"
+    ToolTip="MaterialDesignFloatingActionSecondaryButton"
+    Click="Button_Click_1"
+    DockPanel.Dock="Right"
+    Width="60"
+    
+    Background="#FCC874" Height="50">
+                <materialDesign:PackIcon 
+        Kind="DeleteOutline"
+        Height="31"
+        Width="55"
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center" />
+            </Button>
+          
+        </DockPanel>
+
+       
+        <DataGrid Grid.Row="1" Grid.Column="0" Margin="10,0,10,20" Background="#FFE9A3"   IsReadOnly="true"
+                  ItemsSource="{Binding Clients}" SelectedItem="{Binding SelectedClient, Mode=TwoWay}" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Название компании" Binding="{Binding CompanyName}"/>
+                <DataGridTextColumn Header="Телефон" Binding="{Binding PhoneNumber}"/>
+                <DataGridTextColumn Header="Адрес" Binding="{Binding Address}"/>
+                <DataGridTextColumn Header="Email" Binding="{Binding Email}"/>
+                <DataGridTextColumn Header="Контактное лицо" Binding="{Binding ContactPersonName}"/>
+                <DataGridTextColumn Header="Фамилия" Binding="{Binding ContactPersonSurname}"/>
+                <DataGridTextColumn Header="Отчество" Binding="{Binding ContactPersonMiddlename}"/>
+                <DataGridTextColumn Header="Номер договора" Binding="{Binding ContractNumber}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+       
+        <Grid Grid.Row="1" Grid.Column="1" Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+           
+            <StackPanel VerticalAlignment="Top" Margin="10">
+              
+                <TextBox x:Name="TextBoxCompanyName" Height="30" Margin="0,5" Background="White" BorderBrush="White"  />
+                <TextBox x:Name="TextBoxPhoneNumber" Height="30" Margin="0,5" Background="White" BorderBrush="White"/>
+                <TextBox x:Name="TextBoxAddress" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
+                <TextBox x:Name="TextBoxEmail" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
+                <TextBox x:Name="TextBoxContactPersonName" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
+                <TextBox x:Name="TextBoxContactPersonSurname" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
+                <TextBox x:Name="TextBoxContactPersonMiddlename" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
+                <TextBox x:Name="TextBoxContractNumber" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
+
+
+
+                <Button Content="Добавление" Height="40" Margin="0,20,0,0" Background="#FCC874" FontSize="16" FontWeight="Bold" BorderThickness="0" Foreground="Black" Click="ButtonAdd_Click"/>
+                <Button  Content="Изменение" Height="40" Margin="0,20,0,0" Background="#FCC874" FontSize="16" FontWeight="Bold" BorderThickness="0" Foreground="Black" Click="ButtonEdit_Click"/>
+                <Button Content="Удаление" Height="40" Margin="0,20,0,0" Background="#FCC874" FontSize="16" FontWeight="Bold" BorderThickness="0" Foreground="Black" Click="ButtonDelete_Click"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

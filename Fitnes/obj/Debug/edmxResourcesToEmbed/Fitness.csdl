@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FitnesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Clients">
+    <Key>
+      <PropertyRef Name="ID_Clients" />
+    </Key>
+    <Property Name="ID_Clients" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ContractNumber" Type="Int32" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ContactPersonName" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ContactPersonSurname" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ContactPersonMiddlename" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Orders" Relationship="Self.FK__Orders__Clients___571DF1D5" FromRole="Clients" ToRole="Orders" />
+  </EntityType>
+  <EntityType Name="Employees">
+    <Key>
+      <PropertyRef Name="ID_Employees" />
+    </Key>
+    <Property Name="ID_Employees" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeName" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EmployeeSurname" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EmployeeMiddlename" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="JobTitle_ID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="JobTitle" Relationship="Self.FK__Employees__JobTi__4BAC3F29" FromRole="Employees" ToRole="JobTitle" />
+    <NavigationProperty Name="Orders" Relationship="Self.FK__Orders__Employee__59FA5E80" FromRole="Employees" ToRole="Orders" />
+  </EntityType>
+  <EntityType Name="JobTitle">
+    <Key>
+      <PropertyRef Name="ID_JobTitle" />
+    </Key>
+    <Property Name="ID_JobTitle" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="JobTitle1" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Employees" Relationship="Self.FK__Employees__JobTi__4BAC3F29" FromRole="JobTitle" ToRole="Employees" />
+  </EntityType>
+  <EntityType Name="Maintenance">
+    <Key>
+      <PropertyRef Name="ID_Maintenance" />
+    </Key>
+    <Property Name="ID_Maintenance" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaintenanceDate" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TypeOfWork" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MaintenanceStatus_ID" Type="Int32" Nullable="false" />
+    <Property Name="Technique_ID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="MaintenanceStatus" Relationship="Self.FK__Maintenan__Maint__5EBF139D" FromRole="Maintenance" ToRole="MaintenanceStatus" />
+    <NavigationProperty Name="Technique" Relationship="Self.FK__Maintenan__Techn__5FB337D6" FromRole="Maintenance" ToRole="Technique" />
+  </EntityType>
+  <EntityType Name="MaintenanceStatus">
+    <Key>
+      <PropertyRef Name="ID_MaintenanceStatus" />
+    </Key>
+    <Property Name="ID_MaintenanceStatus" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaintenanceStatus1" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Maintenance" Relationship="Self.FK__Maintenan__Maint__5EBF139D" FromRole="MaintenanceStatus" ToRole="Maintenance" />
+  </EntityType>
+  <EntityType Name="Orders">
+    <Key>
+      <PropertyRef Name="ID_Order" />
+    </Key>
+    <Property Name="ID_Order" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderNumber" Type="Int32" Nullable="false" />
+    <Property Name="Clients_ID" Type="Int32" Nullable="false" />
+    <Property Name="Technique_ID" Type="Int32" Nullable="false" />
+    <Property Name="DateOfIssue" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ReturnDate" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="OrderStatus_ID" Type="Int32" Nullable="false" />
+    <Property Name="RentalPeriod" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Employees_ID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Clients" Relationship="Self.FK__Orders__Clients___571DF1D5" FromRole="Orders" ToRole="Clients" />
+    <NavigationProperty Name="Employees" Relationship="Self.FK__Orders__Employee__59FA5E80" FromRole="Orders" ToRole="Employees" />
+    <NavigationProperty Name="OrderStatus" Relationship="Self.FK__Orders__OrderSta__59063A47" FromRole="Orders" ToRole="OrderStatus" />
+    <NavigationProperty Name="Technique" Relationship="Self.FK__Orders__Techniqu__5812160E" FromRole="Orders" ToRole="Technique" />
+  </EntityType>
+  <EntityType Name="OrderStatus">
+    <Key>
+      <PropertyRef Name="ID_OrderStatus" />
+    </Key>
+    <Property Name="ID_OrderStatus" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderStatus1" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Orders" Relationship="Self.FK__Orders__OrderSta__59063A47" FromRole="OrderStatus" ToRole="Orders" />
+  </EntityType>
+  <EntityType Name="States">
+    <Key>
+      <PropertyRef Name="ID_State" />
+    </Key>
+    <Property Name="ID_State" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="States1" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Technique" Relationship="Self.FK__Technique__State__5441852A" FromRole="States" ToRole="Technique" />
+  </EntityType>
+  <EntityType Name="Technique">
+    <Key>
+      <PropertyRef Name="ID_Technique" />
+    </Key>
+    <Property Name="ID_Technique" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TechnicianNumber" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TechniqueName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TechniqueModel" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="YearOfManufacture" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RentalCost" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="State_ID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Maintenance" Relationship="Self.FK__Maintenan__Techn__5FB337D6" FromRole="Technique" ToRole="Maintenance" />
+    <NavigationProperty Name="Orders" Relationship="Self.FK__Orders__Techniqu__5812160E" FromRole="Technique" ToRole="Orders" />
+    <NavigationProperty Name="States" Relationship="Self.FK__Technique__State__5441852A" FromRole="Technique" ToRole="States" />
+  </EntityType>
+  <Association Name="FK__Orders__Clients___571DF1D5">
+    <End Role="Clients" Type="Self.Clients" Multiplicity="1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clients">
+        <PropertyRef Name="ID_Clients" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="Clients_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employees__JobTi__4BAC3F29">
+    <End Role="JobTitle" Type="Self.JobTitle" Multiplicity="1" />
+    <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JobTitle">
+        <PropertyRef Name="ID_JobTitle" />
+      </Principal>
+      <Dependent Role="Employees">
+        <PropertyRef Name="JobTitle_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Orders__Employee__59FA5E80">
+    <End Role="Employees" Type="Self.Employees" Multiplicity="1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="ID_Employees" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="Employees_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Maintenan__Maint__5EBF139D">
+    <End Role="MaintenanceStatus" Type="Self.MaintenanceStatus" Multiplicity="1" />
+    <End Role="Maintenance" Type="Self.Maintenance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MaintenanceStatus">
+        <PropertyRef Name="ID_MaintenanceStatus" />
+      </Principal>
+      <Dependent Role="Maintenance">
+        <PropertyRef Name="MaintenanceStatus_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Maintenan__Techn__5FB337D6">
+    <End Role="Technique" Type="Self.Technique" Multiplicity="1" />
+    <End Role="Maintenance" Type="Self.Maintenance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Technique">
+        <PropertyRef Name="ID_Technique" />
+      </Principal>
+      <Dependent Role="Maintenance">
+        <PropertyRef Name="Technique_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Orders__OrderSta__59063A47">
+    <End Role="OrderStatus" Type="Self.OrderStatus" Multiplicity="1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrderStatus">
+        <PropertyRef Name="ID_OrderStatus" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="OrderStatus_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Orders__Techniqu__5812160E">
+    <End Role="Technique" Type="Self.Technique" Multiplicity="1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Technique">
+        <PropertyRef Name="ID_Technique" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="Technique_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Technique__State__5441852A">
+    <End Role="States" Type="Self.States" Multiplicity="1" />
+    <End Role="Technique" Type="Self.Technique" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="States">
+        <PropertyRef Name="ID_State" />
+      </Principal>
+      <Dependent Role="Technique">
+        <PropertyRef Name="State_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="FitnesEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Clients" EntityType="Self.Clients" />
+    <EntitySet Name="Employees" EntityType="Self.Employees" />
+    <EntitySet Name="JobTitle" EntityType="Self.JobTitle" />
+    <EntitySet Name="Maintenance" EntityType="Self.Maintenance" />
+    <EntitySet Name="MaintenanceStatus" EntityType="Self.MaintenanceStatus" />
+    <EntitySet Name="Orders" EntityType="Self.Orders" />
+    <EntitySet Name="OrderStatus" EntityType="Self.OrderStatus" />
+    <EntitySet Name="States" EntityType="Self.States" />
+    <EntitySet Name="Technique" EntityType="Self.Technique" />
+    <AssociationSet Name="FK__Orders__Clients___571DF1D5" Association="Self.FK__Orders__Clients___571DF1D5">
+      <End Role="Clients" EntitySet="Clients" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employees__JobTi__4BAC3F29" Association="Self.FK__Employees__JobTi__4BAC3F29">
+      <End Role="JobTitle" EntitySet="JobTitle" />
+      <End Role="Employees" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Orders__Employee__59FA5E80" Association="Self.FK__Orders__Employee__59FA5E80">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Maintenan__Maint__5EBF139D" Association="Self.FK__Maintenan__Maint__5EBF139D">
+      <End Role="MaintenanceStatus" EntitySet="MaintenanceStatus" />
+      <End Role="Maintenance" EntitySet="Maintenance" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Maintenan__Techn__5FB337D6" Association="Self.FK__Maintenan__Techn__5FB337D6">
+      <End Role="Technique" EntitySet="Technique" />
+      <End Role="Maintenance" EntitySet="Maintenance" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Orders__OrderSta__59063A47" Association="Self.FK__Orders__OrderSta__59063A47">
+      <End Role="OrderStatus" EntitySet="OrderStatus" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Orders__Techniqu__5812160E" Association="Self.FK__Orders__Techniqu__5812160E">
+      <End Role="Technique" EntitySet="Technique" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Technique__State__5441852A" Association="Self.FK__Technique__State__5441852A">
+      <End Role="States" EntitySet="States" />
+      <End Role="Technique" EntitySet="Technique" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
