@@ -77,15 +77,15 @@
 
            
             <StackPanel VerticalAlignment="Top" Margin="10">
-              
-                <TextBox x:Name="TextBoxCompanyName" Height="30" Margin="0,5" Background="White" BorderBrush="White"  />
-                <TextBox x:Name="TextBoxPhoneNumber" Height="30" Margin="0,5" Background="White" BorderBrush="White"/>
-                <TextBox x:Name="TextBoxAddress" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
-                <TextBox x:Name="TextBoxEmail" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
-                <TextBox x:Name="TextBoxContactPersonName" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
-                <TextBox x:Name="TextBoxContactPersonSurname" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
-                <TextBox x:Name="TextBoxContactPersonMiddlename" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
-                <TextBox x:Name="TextBoxContractNumber" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
+
+                <TextBox x:Name="TextBoxCompanyName" materialDesign:HintAssist.Hint="Название компании" Height="30" Margin="0,5" Background="White" BorderBrush="White"  />
+                <TextBox x:Name="TextBoxPhoneNumber" materialDesign:HintAssist.Hint="Номер телефона" Height="30" Margin="0,5" Background="White" BorderBrush="White"/>
+                <TextBox x:Name="TextBoxAddress" materialDesign:HintAssist.Hint="Адресс" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
+                <TextBox x:Name="TextBoxEmail" materialDesign:HintAssist.Hint="Почта" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
+                <TextBox x:Name="TextBoxContactPersonName" materialDesign:HintAssist.Hint="Имя" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
+                <TextBox x:Name="TextBoxContactPersonSurname" materialDesign:HintAssist.Hint="Фамилия" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
+                <TextBox x:Name="TextBoxContactPersonMiddlename" materialDesign:HintAssist.Hint="Отчество" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
+                <TextBox x:Name="TextBoxContractNumber" materialDesign:HintAssist.Hint="Номер договора" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
 
 
 

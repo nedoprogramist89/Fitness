@@ -74,11 +74,12 @@ Background="#FCC874" Height="50">
 
           
             <StackPanel VerticalAlignment="Top" Margin="10">
-           
-                <TextBox x:Name="TextBoxMaintenanceDate" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
-                <TextBox x:Name="TextBoxTypeOfWork" Height="30" Margin="0,5" Background="White" BorderBrush="White"/>
+
+                <TextBox x:Name="TextBoxMaintenanceDate" materialDesign:HintAssist.Hint="Дата обслуживания" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
+                <TextBox x:Name="TextBoxTypeOfWork"  materialDesign:HintAssist.Hint="Тип работы" Height="30" Margin="0,5" Background="White" BorderBrush="White"/>
                 <ComboBox
 x:Name="ComboBoxMaintenanceStatus"
+materialDesign:HintAssist.Hint="Статус обслуживания"
 Margin="0,5"
  Style="{StaticResource MaterialDesignOutlinedComboBox}"
  Background="White"
@@ -87,6 +88,7 @@ Margin="0,5"
  SelectedValue="{Binding MaintenanceStatus_ID}">
                 </ComboBox>
                 <ComboBox
+ materialDesign:HintAssist.Hint="Техника"
 x:Name="ComboBoxTechnique"
 Margin="0,5"
 Style="{StaticResource MaterialDesignOutlinedComboBox}"

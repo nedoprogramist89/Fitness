@@ -74,8 +74,7 @@ namespace Fitnes
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка при загрузке данных: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}",
-                                "Ошибка загрузки данных", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Ошибка при загрузке данных: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}");
             }
         }
 
@@ -87,7 +86,7 @@ namespace Fitnes
                     string.IsNullOrWhiteSpace(TextBoxTechniqueModel.Text) || string.IsNullOrWhiteSpace(TextBoxYearOfManufacture.Text) ||
                     string.IsNullOrWhiteSpace(TextBoxRentalCost.Text) || ComboBoxState.SelectedValue == null)
                 {
-                    MessageBox.Show("Заполните все обязательные поля!", "Ошибка ввода данных", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    MessageBox.Show("Заполните все обязательные поля!", "Ошибка ввода данных");
                     return;
                 }
 
@@ -107,13 +106,12 @@ namespace Fitnes
                     context.SaveChanges();
 
                     Techniques.Add(newTechnique);
-                    MessageBox.Show("Техника успешно добавлена!", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Техника успешно добавлена!", "Успех");
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка при добавлении техники: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}",
-                                "Ошибка добавления", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Ошибка при добавлении техники: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}");
             }
         }
 
@@ -121,7 +119,7 @@ namespace Fitnes
         {
             if (SelectedTechnique == null)
             {
-                MessageBox.Show("Выберите технику для редактирования!", "Ошибка выбора", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Выберите технику для редактирования!", "Ошибка выбора");
                 return;
             }
 
@@ -131,7 +129,7 @@ namespace Fitnes
                     string.IsNullOrWhiteSpace(TextBoxTechniqueModel.Text) || string.IsNullOrWhiteSpace(TextBoxYearOfManufacture.Text) ||
                     string.IsNullOrWhiteSpace(TextBoxRentalCost.Text) || ComboBoxState.SelectedValue == null)
                 {
-                    MessageBox.Show("Заполните все обязательные поля!", "Ошибка ввода данных", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    MessageBox.Show("Заполните все обязательные поля!", "Ошибка ввода данных");
                     return;
                 }
 
@@ -151,14 +149,13 @@ namespace Fitnes
 
                         var index = Techniques.IndexOf(SelectedTechnique);
                         Techniques[index] = techniqueToUpdate;
-                        MessageBox.Show("Техника успешно изменена!", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
+                        MessageBox.Show("Техника успешно изменена!", "Успех");
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка при редактировании техники: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}",
-                                "Ошибка редактирования", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Ошибка при редактировании техники: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}");
             }
         }
 
@@ -166,7 +163,7 @@ namespace Fitnes
         {
             if (SelectedTechnique == null)
             {
-                MessageBox.Show("Выберите технику для удаления!", "Ошибка выбора", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Выберите технику для удаления!", "Ошибка выбора");
                 return;
             }
 
@@ -181,14 +178,13 @@ namespace Fitnes
                         context.SaveChanges();
 
                         Techniques.Remove(SelectedTechnique);
-                        MessageBox.Show("Техника успешно удалена!", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
+                        MessageBox.Show("Техника успешно удалена!", "Успех");
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка при удалении техники: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}",
-                                "Ошибка удаления", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Ошибка при удалении техники: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}");
             }
         }
 

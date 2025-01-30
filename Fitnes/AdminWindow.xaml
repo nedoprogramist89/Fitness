@@ -39,11 +39,11 @@ Background="#FCC874">
 
             <TextBlock Text="Админ" Grid.Row="0" FontSize="30" FontWeight="Bold" Foreground="#CCA15D" HorizontalAlignment="Center" Margin="0,-100,0,84" Width="107"/>
 
-            <Button Content="Таблица с техникой" Height="50" Width="266" Background="#FCC874" FontSize="16" FontWeight="Bold" BorderThickness="0" Foreground="Black" Grid.Row="2" Click="Button_Click"/>
-            <Button Content="Таблица с клиентами" Height="50" Width="266" Background="#FCC874" FontSize="16" FontWeight="Bold" BorderThickness="0" Foreground="Black" Grid.Row="4" Click="Button_Click_1"/>
-            <Button Content="Таблица с заказами" Height="50" Width="266" Background="#FCC874" FontSize="16" FontWeight="Bold" BorderThickness="0" Foreground="Black" Grid.Row="6" Click="Button_Click_2"/>
-            <Button Content="Таблица с тех обслуживанием" Height="50" Width="266" Background="#FCC874" FontSize="16" FontWeight="Bold" BorderThickness="0" Foreground="Black" Grid.Row="8" Click="Button_Click_3"/>
-            <Button Content="Таблица с сотрудниками" Height="50" Width="266" Background="#FCC874" FontSize="16" FontWeight="Bold" BorderThickness="0" Foreground="Black" Grid.Row="10" Click="Button_Click_4"/>
+            <Button Content="Таблица с техникой" Height="50" Width="280" Background="#FCC874" FontSize="16" FontWeight="Bold" BorderThickness="0" Foreground="Black" Grid.Row="2" Click="Button_Click"/>
+            <Button Content="Таблица с клиентами" Height="50" Width="280" Background="#FCC874" FontSize="16" FontWeight="Bold" BorderThickness="0" Foreground="Black" Grid.Row="4" Click="Button_Click_1"/>
+            <Button Content="Таблица с заказами" Height="50" Width="280" Background="#FCC874" FontSize="16" FontWeight="Bold" BorderThickness="0" Foreground="Black" Grid.Row="6" Click="Button_Click_2"/>
+            <Button Content="Таблица с тех обслуживанием" Height="50" Width="280" Background="#FCC874" FontSize="16" FontWeight="Bold" BorderThickness="0" Foreground="Black" Grid.Row="8" Click="Button_Click_3"/>
+            <Button Content="Таблица с сотрудниками" Height="50" Width="280" Background="#FCC874" FontSize="16" FontWeight="Bold" BorderThickness="0" Foreground="Black" Grid.Row="10" Click="Button_Click_4"/>
         </Grid>
     </Grid>
 </Window>

@@ -46,6 +46,7 @@ Background="#FCC874">
 
             <StackPanel VerticalAlignment="Top"  Height="196" Margin="10,10,10,0">
                 <ComboBox
+                    materialDesign:HintAssist.Hint="Отчёты"
     x:Name="ComboBoxReports"
     Margin="0,5"
     Style="{StaticResource MaterialDesignOutlinedComboBox}"

@@ -75,15 +75,16 @@ Background="#FCC874" Height="50">
 
           
             <StackPanel VerticalAlignment="Top" Margin="10">
-             
-                <TextBox x:Name="TextBoxEmployeeName" Height="30" Margin="0,5" Background="White" BorderBrush="White"  />
-                <TextBox x:Name="TextBoxEmployeeSurname" Height="30" Margin="0,5" Background="White"  BorderBrush="White" />
-                <TextBox x:Name="TextBoxEmployeeMiddlename" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
-                <TextBox x:Name="TextBoxPhoneNumber" Height="30" Margin="0,5" Background="White"  BorderBrush="White"/>
-                <TextBox x:Name="TextBoxEmail" Height="30" Margin="0,5" Background="White"  BorderBrush="White" />
-                <TextBox x:Name="TextBoxPassword" Height="30" Margin="0,5" Background="White"  BorderBrush="White" />
+
+                <TextBox x:Name="TextBoxEmployeeName" materialDesign:HintAssist.Hint="Имя" Height="30" Margin="0,5" Background="White" BorderBrush="White"  />
+                <TextBox x:Name="TextBoxEmployeeSurname" materialDesign:HintAssist.Hint="Фамилия" Height="30" Margin="0,5" Background="White"  BorderBrush="White" />
+                <TextBox x:Name="TextBoxEmployeeMiddlename" materialDesign:HintAssist.Hint="Отчёства" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
+                <TextBox x:Name="TextBoxPhoneNumber" materialDesign:HintAssist.Hint="Телефон" Height="30" Margin="0,5" Background="White"  BorderBrush="White"/>
+                <TextBox x:Name="TextBoxEmail" materialDesign:HintAssist.Hint="Почта" Height="30" Margin="0,5" Background="White"  BorderBrush="White" />
+                <TextBox x:Name="TextBoxPassword" materialDesign:HintAssist.Hint="Пароль" Height="30" Margin="0,5" Background="White"  BorderBrush="White" />
                 <ComboBox
     x:Name="ComboBoxJobTitle"
+    materialDesign:HintAssist.Hint="Должность"
     Margin="0,5"
     Style="{StaticResource MaterialDesignOutlinedComboBox}"
     Background="White"

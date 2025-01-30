@@ -67,12 +67,13 @@ Background="#FCC874" Height="50">
             </Grid.RowDefinitions>
 
             <StackPanel VerticalAlignment="Top" Margin="10">
-                <TextBox x:Name="TextBoxTechnicianNumber" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
-                <TextBox x:Name="TextBoxTechniqueName" Height="30" Margin="0,5" Background="White"  BorderBrush="White"  />
-                <TextBox x:Name="TextBoxTechniqueModel" Height="30" Margin="0,5" Background="White" BorderBrush="White"  />
-                <TextBox x:Name="TextBoxYearOfManufacture" Height="30" Margin="0,5" Background="White" BorderBrush="White"  />
-                <TextBox x:Name="TextBoxRentalCost" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
+                <TextBox x:Name="TextBoxTechnicianNumber" materialDesign:HintAssist.Hint="Номер техники" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
+                <TextBox x:Name="TextBoxTechniqueName" materialDesign:HintAssist.Hint="Название техники" Height="30" Margin="0,5" Background="White"  BorderBrush="White"  />
+                <TextBox x:Name="TextBoxTechniqueModel" materialDesign:HintAssist.Hint="Модель техники" Height="30" Margin="0,5" Background="White" BorderBrush="White"  />
+                <TextBox x:Name="TextBoxYearOfManufacture" materialDesign:HintAssist.Hint="Год выпуска" Height="30" Margin="0,5" Background="White" BorderBrush="White"  />
+                <TextBox x:Name="TextBoxRentalCost" materialDesign:HintAssist.Hint="Стоимость аренды" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
                 <ComboBox
+                materialDesign:HintAssist.Hint="Состояние"    
 x:Name="ComboBoxState"
 Margin="0,5"
  Style="{StaticResource MaterialDesignOutlinedComboBox}"

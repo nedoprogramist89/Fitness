@@ -85,8 +85,7 @@ namespace Fitnes
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка при загрузке данных: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}",
-                                "Ошибка загрузки данных", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Ошибка при загрузке данных: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}");
             }
         }
 
@@ -97,7 +96,7 @@ namespace Fitnes
                 if (string.IsNullOrWhiteSpace(TextBoxMaintenanceDate.Text) || string.IsNullOrWhiteSpace(TextBoxTypeOfWork.Text) ||
                     ComboBoxMaintenanceStatus.SelectedValue == null || ComboBoxTechnique.SelectedValue == null)
                 {
-                    MessageBox.Show("Заполните все обязательные поля!", "Ошибка ввода данных", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    MessageBox.Show("Заполните все обязательные поля!", "Ошибка ввода данных");
                     return;
                 }
 
@@ -115,13 +114,12 @@ namespace Fitnes
                     context.SaveChanges();
 
                     Maintenances.Add(newMaintenance);
-                    MessageBox.Show("Обслуживание успешно добавлено!", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Обслуживание успешно добавлено!", "Успех");
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка при добавлении обслуживания: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}",
-                                "Ошибка добавления", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Ошибка при добавлении обслуживания: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}");
             }
         }
 
@@ -129,7 +127,7 @@ namespace Fitnes
         {
             if (SelectedMaintenance == null)
             {
-                MessageBox.Show("Выберите обслуживание для редактирования!", "Ошибка выбора", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Выберите обслуживание для редактирования!", "Ошибка выбора");
                 return;
             }
 
@@ -138,7 +136,7 @@ namespace Fitnes
                 if (string.IsNullOrWhiteSpace(TextBoxMaintenanceDate.Text) || string.IsNullOrWhiteSpace(TextBoxTypeOfWork.Text) ||
                     ComboBoxMaintenanceStatus.SelectedValue == null || ComboBoxTechnique.SelectedValue == null)
                 {
-                    MessageBox.Show("Заполните все обязательные поля!", "Ошибка ввода данных", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    MessageBox.Show("Заполните все обязательные поля!", "Ошибка ввода данных");
                     return;
                 }
 
@@ -157,14 +155,13 @@ namespace Fitnes
            
                         var index = Maintenances.IndexOf(SelectedMaintenance);
                         Maintenances[index] = maintenanceToUpdate;
-                        MessageBox.Show("Обслуживание успешно изменено!", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
+                        MessageBox.Show("Обслуживание успешно изменено!", "Успех");
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка при редактировании обслуживания: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}",
-                                "Ошибка редактирования", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Ошибка при редактировании обслуживания: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}");
             }
         }
 
@@ -172,7 +169,7 @@ namespace Fitnes
         {
             if (SelectedMaintenance == null)
             {
-                MessageBox.Show("Выберите обслуживание для удаления!", "Ошибка выбора", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Выберите обслуживание для удаления!", "Ошибка выбора");
                 return;
             }
 
@@ -188,14 +185,13 @@ namespace Fitnes
 
            
                         Maintenances.Remove(SelectedMaintenance);
-                        MessageBox.Show("Обслуживание успешно удалено!", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
+                        MessageBox.Show("Обслуживание успешно удалено!", "Успех");
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка при удалении обслуживания: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}",
-                                "Ошибка удаления", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Ошибка при удалении обслуживания: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}");
             }
         }
 

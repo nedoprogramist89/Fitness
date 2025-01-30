@@ -218,11 +218,11 @@ namespace Fitnes
             
                 document.Save(filePath);
 
-                MessageBox.Show($"Отчет успешно сохранен на рабочий стол: {fileName}", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show($"Отчет успешно сохранен на рабочий стол: {fileName}", "Успех");
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка при создании отчета: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Ошибка при создании отчета: {ex.Message}", "Ошибка");
             }
         }
 

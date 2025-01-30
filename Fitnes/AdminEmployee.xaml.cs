@@ -76,8 +76,7 @@ namespace Fitnes
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка при загрузке данных: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}",
-                                "Ошибка загрузки данных", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Ошибка при загрузке данных: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}");
             }
         }
 
@@ -90,7 +89,7 @@ namespace Fitnes
                     string.IsNullOrWhiteSpace(TextBoxPhoneNumber.Text) || string.IsNullOrWhiteSpace(TextBoxEmail.Text) ||
                     string.IsNullOrWhiteSpace(TextBoxPassword.Text) || ComboBoxJobTitle.SelectedValue == null)
                 {
-                    MessageBox.Show("Заполните все обязательные поля!", "Ошибка ввода данных", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    MessageBox.Show("Заполните все обязательные поля!", "Ошибка ввода данных");
                     return;
                 }
 
@@ -112,13 +111,12 @@ namespace Fitnes
 
      
                     Employees.Add(newEmployee);
-                    MessageBox.Show("Сотрудник успешно добавлен!", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Сотрудник успешно добавлен!", "Успех");
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка при добавлении сотрудника: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}",
-                                "Ошибка добавления", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Ошибка при добавлении сотрудника: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}");
             }
         }
 
@@ -126,7 +124,7 @@ namespace Fitnes
         {
             if (SelectedEmployee == null)
             {
-                MessageBox.Show("Выберите сотрудника для редактирования!", "Ошибка выбора", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Выберите сотрудника для редактирования!", "Ошибка выбора");
                 return;
             }
 
@@ -137,7 +135,7 @@ namespace Fitnes
                     string.IsNullOrWhiteSpace(TextBoxPhoneNumber.Text) || string.IsNullOrWhiteSpace(TextBoxEmail.Text) ||
                     string.IsNullOrWhiteSpace(TextBoxPassword.Text) || ComboBoxJobTitle.SelectedValue == null)
                 {
-                    MessageBox.Show("Заполните все обязательные поля!", "Ошибка ввода данных", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    MessageBox.Show("Заполните все обязательные поля!", "Ошибка ввода данных");
                     return;
                 }
 
@@ -159,14 +157,13 @@ namespace Fitnes
             
                         var index = Employees.IndexOf(SelectedEmployee);
                         Employees[index] = employeeToUpdate;
-                        MessageBox.Show("Сотрудник успешно изменен!", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
+                        MessageBox.Show("Сотрудник успешно изменен!", "Успех");
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка при редактировании сотрудника: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}",
-                                "Ошибка редактирования", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Ошибка при редактировании сотрудника: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}");
             }
         }
 
@@ -174,7 +171,7 @@ namespace Fitnes
         {
             if (SelectedEmployee == null)
             {
-                MessageBox.Show("Выберите сотрудника для удаления!", "Ошибка выбора", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Выберите сотрудника для удаления!", "Ошибка выбора");
                 return;
             }
 
@@ -190,14 +187,13 @@ namespace Fitnes
 
                
                         Employees.Remove(SelectedEmployee);
-                        MessageBox.Show("Сотрудник успешно удален!", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
+                        MessageBox.Show("Сотрудник успешно удален!", "Успех");
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка при удалении сотрудника: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}",
-                                "Ошибка удаления", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Ошибка при удалении сотрудника: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}");
             }
         }
 

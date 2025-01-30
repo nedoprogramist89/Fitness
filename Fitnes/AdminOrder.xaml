@@ -68,8 +68,9 @@ Background="#FCC874">
             </Grid.RowDefinitions>
 
             <StackPanel VerticalAlignment="Top" Margin="10">
-                <TextBox x:Name="TextBoxOrderNumber" Height="30" Margin="0,5" Background="White" BorderBrush="White"  />
+                <TextBox x:Name="TextBoxOrderNumber" materialDesign:HintAssist.Hint="Номер заказа" Height="30" Margin="0,5" Background="White" BorderBrush="White"  />
                 <ComboBox
+                materialDesign:HintAssist.Hint="Клиент"
                 x:Name="ComboBoxClients"
                 Margin="0,5"
                 Style="{StaticResource MaterialDesignOutlinedComboBox}"
@@ -79,6 +80,7 @@ Background="#FCC874">
                 SelectedValue="{Binding Clients_ID}">
                 </ComboBox>
                 <ComboBox
+                materialDesign:HintAssist.Hint="Техника"
                 x:Name="ComboBoxTechnique"
                 Margin="0,5"
                 Style="{StaticResource MaterialDesignOutlinedComboBox}"
@@ -87,10 +89,11 @@ Background="#FCC874">
                 SelectedValuePath="ID_Technique"
                 SelectedValue="{Binding Technique_ID}">
                 </ComboBox>
-                <TextBox x:Name="TextBoxDateOfIssue" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
-                <TextBox x:Name="TextBoxReturnDate" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
-                <TextBox x:Name="TextBoxPrice" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
+                <TextBox x:Name="TextBoxDateOfIssue" materialDesign:HintAssist.Hint="Дата выдачи" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
+                <TextBox x:Name="TextBoxReturnDate" materialDesign:HintAssist.Hint="Дата возврата" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
+                <TextBox x:Name="TextBoxPrice"  materialDesign:HintAssist.Hint="Цена" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
                 <ComboBox
+                    materialDesign:HintAssist.Hint="Статус заказа"
 x:Name="ComboBoxOrderStatus"
 Margin="0,5"
  Style="{StaticResource MaterialDesignOutlinedComboBox}"
@@ -99,8 +102,9 @@ Margin="0,5"
  SelectedValuePath="ID_OrderStatus"
  SelectedValue="{Binding OrderStatus_ID}">
                 </ComboBox>
-                <TextBox x:Name="TextBoxRentalPeriod" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
+                <TextBox x:Name="TextBoxRentalPeriod" materialDesign:HintAssist.Hint="Период аренды" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
                 <ComboBox
+                    materialDesign:HintAssist.Hint="Сотрудник"
 x:Name="ComboBoxEmployees"
 Margin="0,5"
  Style="{StaticResource MaterialDesignOutlinedComboBox}"

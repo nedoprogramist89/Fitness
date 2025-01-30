@@ -64,8 +64,7 @@ namespace Fitnes
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка при загрузке данных: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}",
-                                "Ошибка загрузки данных", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Ошибка при загрузке данных: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}");
             }
         }
 
@@ -79,7 +78,7 @@ namespace Fitnes
                     string.IsNullOrWhiteSpace(TextBoxContactPersonName.Text) || string.IsNullOrWhiteSpace(TextBoxContactPersonSurname.Text) ||
                     string.IsNullOrWhiteSpace(TextBoxContractNumber.Text))
                 {
-                    MessageBox.Show("Заполните все обязательные поля!", "Ошибка ввода данных", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    MessageBox.Show("Заполните все обязательные поля!", "Ошибка ввода данных");
                     return;
                 }
 
@@ -102,13 +101,12 @@ namespace Fitnes
 
                   
                     Clients.Add(newClient);
-                    MessageBox.Show("Клиент успешно добавлен!", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Клиент успешно добавлен!", "Успех");
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка при добавлении клиента: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}",
-                                "Ошибка добавления", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Ошибка при добавлении клиента: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}");
             }
         }
 
@@ -116,7 +114,7 @@ namespace Fitnes
         {
             if (SelectedClient == null)
             {
-                MessageBox.Show("Выберите клиента для редактирования!", "Ошибка выбора", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Выберите клиента для редактирования!", "Ошибка выбора");
                 return;
             }
 
@@ -128,7 +126,7 @@ namespace Fitnes
                     string.IsNullOrWhiteSpace(TextBoxContactPersonName.Text) || string.IsNullOrWhiteSpace(TextBoxContactPersonSurname.Text) ||
                     string.IsNullOrWhiteSpace(TextBoxContractNumber.Text))
                 {
-                    MessageBox.Show("Заполните все обязательные поля!", "Ошибка ввода данных", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    MessageBox.Show("Заполните все обязательные поля!", "Ошибка ввода данных");
                     return;
                 }
 
@@ -148,17 +146,16 @@ namespace Fitnes
 
                         context.SaveChanges();
 
-                        // Обновление DataGrid
+                      
                         var index = Clients.IndexOf(SelectedClient);
                         Clients[index] = clientToUpdate;
-                        MessageBox.Show("Клиент успешно изменен!", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
+                        MessageBox.Show("Клиент успешно изменен!", "Успех");
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка при редактировании клиента: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}",
-                                "Ошибка редактирования", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Ошибка при редактировании клиента: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}");
             }
         }
 
@@ -166,7 +163,7 @@ namespace Fitnes
         {
             if (SelectedClient == null)
             {
-                MessageBox.Show("Выберите клиента для удаления!", "Ошибка выбора", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Выберите клиента для удаления!", "Ошибка выбора");
                 return;
             }
 
@@ -180,16 +177,15 @@ namespace Fitnes
                         context.Clients.Remove(clientToDelete);
                         context.SaveChanges();
 
-                        // Удаление из DataGrid
+                      
                         Clients.Remove(SelectedClient);
-                        MessageBox.Show("Клиент успешно удален!", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
+                        MessageBox.Show("Клиент успешно удален!", "Успех");
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка при удалении клиента: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}",
-                                "Ошибка удаления", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Ошибка при удалении клиента: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}");
             }
         }
 

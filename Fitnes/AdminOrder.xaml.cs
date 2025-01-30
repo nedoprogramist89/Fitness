@@ -123,8 +123,7 @@ namespace Fitnes
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка при загрузке данных: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}",
-                    "Ошибка загрузки данных", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Ошибка при загрузке данных: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}");
             }
         }
 
@@ -132,7 +131,7 @@ namespace Fitnes
         {
             if (!ValidateInputs())
             {
-                MessageBox.Show("Заполните все обязательные поля!", "Ошибка ввода данных", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Заполните все обязательные поля!", "Ошибка ввода данных");
                 return;
             }
             try
@@ -154,14 +153,13 @@ namespace Fitnes
                     context.Orders.Add(newOrder);
                     context.SaveChanges();
                     Orders.Add(newOrder);
-                    MessageBox.Show("Заказ успешно добавлен!", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Заказ успешно добавлен!", "Успех");
                     GenerateContract(newOrder);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка при добавлении заказа: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}",
-                    "Ошибка добавления", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Ошибка при добавлении заказа: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}");
             }
         }
 
@@ -169,12 +167,12 @@ namespace Fitnes
         {
             if (SelectedOrder == null)
             {
-                MessageBox.Show("Выберите заказ для редактирования!", "Ошибка выбора", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Выберите заказ для редактирования!", "Ошибка выбора");
                 return;
             }
             if (!ValidateInputs())
             {
-                MessageBox.Show("Заполните все обязательные поля!", "Ошибка ввода данных", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Заполните все обязательные поля!", "Ошибка ввода данных");
                 return;
             }
             try
@@ -196,14 +194,13 @@ namespace Fitnes
                         context.SaveChanges();
                         var index = Orders.IndexOf(SelectedOrder);
                         Orders[index] = orderToUpdate;
-                        MessageBox.Show("Заказ успешно изменен!", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
+                        MessageBox.Show("Заказ успешно изменен!", "Успех");
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка при редактировании заказа: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}",
-                    "Ошибка редактирования", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Ошибка при редактировании заказа: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}");
             }
         }
 
@@ -253,7 +250,7 @@ namespace Fitnes
         {
             if (order == null)
             {
-                MessageBox.Show("Заказ не найден!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Заказ не найден!", "Ошибка");
                 return;
             }
 
@@ -273,7 +270,7 @@ namespace Fitnes
                 string fontPath = @"C:\Windows\Fonts\times.ttf";
                 if (!File.Exists(fontPath))
                 {
-                    MessageBox.Show("Шрифт Times New Roman не найден!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show("Шрифт Times New Roman не найден!", "Ошибка");
                     return;
                 }
                 float fontSize = 12f;
