@@ -1,70 +1,18 @@
 ﻿using System;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.Data.Entity;
 using System.Linq;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace Fitnes
 {
-    public partial class AdminMaintenance : Window, INotifyPropertyChanged
+    public partial class AdminMaintenance : Window
     {
-        private ObservableCollection<Maintenance> _maintenances;
-        private ObservableCollection<MaintenanceStatus> _maintenanceStatuses;
-        private ObservableCollection<Technique> _techniques;
-        private Maintenance _selectedMaintenance;
-
-        public ObservableCollection<Maintenance> Maintenances
-        {
-            get => _maintenances;
-            set
-            {
-                _maintenances = value;
-                OnPropertyChanged(nameof(Maintenances));
-            }
-        }
-
-        public ObservableCollection<MaintenanceStatus> MaintenanceStatuses
-        {
-            get => _maintenanceStatuses;
-            set
-            {
-                _maintenanceStatuses = value;
-                OnPropertyChanged(nameof(MaintenanceStatuses));
-            }
-        }
-
-        public ObservableCollection<Technique> Techniques
-        {
-            get => _techniques;
-            set
-            {
-                _techniques = value;
-                OnPropertyChanged(nameof(Techniques));
-            }
-        }
-
-        public Maintenance SelectedMaintenance
-        {
-            get => _selectedMaintenance;
-            set
-            {
-                _selectedMaintenance = value;
-                OnPropertyChanged(nameof(SelectedMaintenance));
-                if (_selectedMaintenance != null)
-                {
-                    TextBoxMaintenanceDate.Text = _selectedMaintenance.MaintenanceDate;
-                    TextBoxTypeOfWork.Text = _selectedMaintenance.TypeOfWork;
-                    ComboBoxMaintenanceStatus.SelectedValue = _selectedMaintenance.MaintenanceStatus_ID;
-                    ComboBoxTechnique.SelectedValue = _selectedMaintenance.Technique_ID;
-                }
-            }
-        }
+        private FitnesEntities1 _context = new FitnesEntities1(); 
 
         public AdminMaintenance()
         {
             InitializeComponent();
-            DataContext = this;
             LoadData();
         }
 
@@ -72,20 +20,18 @@ namespace Fitnes
         {
             try
             {
-                using (var context = new FitnesEntities1())
-                {
-                    Maintenances = new ObservableCollection<Maintenance>(context.Maintenance.ToList());
+                
+                _context.Maintenance.Load(); 
+                _context.MaintenanceStatus.Load(); 
+                _context.Technique.Load(); 
 
-                    MaintenanceStatuses = new ObservableCollection<MaintenanceStatus>(context.MaintenanceStatus.ToList());
-                    Techniques = new ObservableCollection<Technique>(context.Technique.ToList());
-
-                    ComboBoxMaintenanceStatus.ItemsSource = MaintenanceStatuses;
-                    ComboBoxTechnique.ItemsSource = Techniques;
-                }
+                dgrdMaintenance.ItemsSource = _context.Maintenance.Local; 
+                ComboBoxMaintenanceStatus.ItemsSource = _context.MaintenanceStatus.Local; 
+                ComboBoxTechnique.ItemsSource = _context.Technique.Local; 
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка при загрузке данных: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}");
+                MessageBox.Show($"Ошибка при загрузке данных: {ex.Message}");
             }
         }
 
@@ -93,6 +39,7 @@ namespace Fitnes
         {
             try
             {
+             
                 if (string.IsNullOrWhiteSpace(TextBoxMaintenanceDate.Text) || string.IsNullOrWhiteSpace(TextBoxTypeOfWork.Text) ||
                     ComboBoxMaintenanceStatus.SelectedValue == null || ComboBoxTechnique.SelectedValue == null)
                 {
@@ -100,107 +47,109 @@ namespace Fitnes
                     return;
                 }
 
-                using (var context = new FitnesEntities1())
+        
+                var newMaintenance = new Maintenance
                 {
-                    var newMaintenance = new Maintenance
-                    {
-                        MaintenanceDate = TextBoxMaintenanceDate.Text,
-                        TypeOfWork = TextBoxTypeOfWork.Text,
-                        MaintenanceStatus_ID = (int)ComboBoxMaintenanceStatus.SelectedValue,
-                        Technique_ID = (int)ComboBoxTechnique.SelectedValue
-                    };
+                    MaintenanceDate = TextBoxMaintenanceDate.Text,
+                    TypeOfWork = TextBoxTypeOfWork.Text,
+                    MaintenanceStatus_ID = (int)ComboBoxMaintenanceStatus.SelectedValue,
+                    Technique_ID = (int)ComboBoxTechnique.SelectedValue
+                };
 
-                    context.Maintenance.Add(newMaintenance);
-                    context.SaveChanges();
+                _context.Maintenance.Add(newMaintenance);
+                _context.SaveChanges();
 
-                    Maintenances.Add(newMaintenance);
-                    MessageBox.Show("Обслуживание успешно добавлено!", "Успех");
-                }
+                LoadData(); 
+                ClearFields();
+                MessageBox.Show("Обслуживание успешно добавлено!", "Успех");
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка при добавлении обслуживания: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}");
+                MessageBox.Show($"Ошибка при добавлении обслуживания: {ex.Message}");
             }
         }
 
         private void ButtonEdit_Click(object sender, RoutedEventArgs e)
         {
-            if (SelectedMaintenance == null)
+            if (dgrdMaintenance.SelectedItem is Maintenance selectedMaintenance)
             {
-                MessageBox.Show("Выберите обслуживание для редактирования!", "Ошибка выбора");
-                return;
-            }
-
-            try
-            {
-                if (string.IsNullOrWhiteSpace(TextBoxMaintenanceDate.Text) || string.IsNullOrWhiteSpace(TextBoxTypeOfWork.Text) ||
-                    ComboBoxMaintenanceStatus.SelectedValue == null || ComboBoxTechnique.SelectedValue == null)
+                try
                 {
-                    MessageBox.Show("Заполните все обязательные поля!", "Ошибка ввода данных");
-                    return;
-                }
-
-                using (var context = new FitnesEntities1())
-                {
-                    var maintenanceToUpdate = context.Maintenance.Find(SelectedMaintenance.ID_Maintenance);
-                    if (maintenanceToUpdate != null)
+                    
+                    if (string.IsNullOrWhiteSpace(TextBoxMaintenanceDate.Text) || string.IsNullOrWhiteSpace(TextBoxTypeOfWork.Text) ||
+                        ComboBoxMaintenanceStatus.SelectedValue == null || ComboBoxTechnique.SelectedValue == null)
                     {
-                        maintenanceToUpdate.MaintenanceDate = TextBoxMaintenanceDate.Text;
-                        maintenanceToUpdate.TypeOfWork = TextBoxTypeOfWork.Text;
-                        maintenanceToUpdate.MaintenanceStatus_ID = (int)ComboBoxMaintenanceStatus.SelectedValue;
-                        maintenanceToUpdate.Technique_ID = (int)ComboBoxTechnique.SelectedValue;
-
-                        context.SaveChanges();
-
-           
-                        var index = Maintenances.IndexOf(SelectedMaintenance);
-                        Maintenances[index] = maintenanceToUpdate;
-                        MessageBox.Show("Обслуживание успешно изменено!", "Успех");
+                        MessageBox.Show("Заполните все обязательные поля!", "Ошибка ввода данных");
+                        return;
                     }
+
+                    
+                    selectedMaintenance.MaintenanceDate = TextBoxMaintenanceDate.Text;
+                    selectedMaintenance.TypeOfWork = TextBoxTypeOfWork.Text;
+                    selectedMaintenance.MaintenanceStatus_ID = (int)ComboBoxMaintenanceStatus.SelectedValue;
+                    selectedMaintenance.Technique_ID = (int)ComboBoxTechnique.SelectedValue;
+
+                    _context.SaveChanges(); 
+                    LoadData(); 
+                    MessageBox.Show("Обслуживание успешно изменено!", "Успех");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ошибка при редактировании обслуживания: {ex.Message}");
                 }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show($"Ошибка при редактировании обслуживания: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}");
+                MessageBox.Show("Выберите обслуживание для редактирования!", "Ошибка");
             }
         }
 
         private void ButtonDelete_Click(object sender, RoutedEventArgs e)
         {
-            if (SelectedMaintenance == null)
+            if (dgrdMaintenance.SelectedItem is Maintenance selectedMaintenance)
             {
-                MessageBox.Show("Выберите обслуживание для удаления!", "Ошибка выбора");
-                return;
-            }
-
-            try
-            {
-                using (var context = new FitnesEntities1())
+                try
                 {
-                    var maintenanceToDelete = context.Maintenance.Find(SelectedMaintenance.ID_Maintenance);
-                    if (maintenanceToDelete != null)
-                    {
-                        context.Maintenance.Remove(maintenanceToDelete);
-                        context.SaveChanges();
-
-           
-                        Maintenances.Remove(SelectedMaintenance);
-                        MessageBox.Show("Обслуживание успешно удалено!", "Успех");
-                    }
+                    _context.Maintenance.Remove(selectedMaintenance); 
+                    _context.SaveChanges(); 
+                    LoadData(); 
+                    MessageBox.Show("Обслуживание успешно удалено!", "Успех");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ошибка при удалении обслуживания: {ex.Message}");
                 }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show($"Ошибка при удалении обслуживания: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}");
+                MessageBox.Show("Выберите обслуживание для удаления!", "Ошибка");
             }
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected void OnPropertyChanged(string propertyName) =>
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        private void dgrdMaintenance_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (dgrdMaintenance.SelectedItem is Maintenance selectedMaintenance)
+            {
+                
+                TextBoxMaintenanceDate.Text = selectedMaintenance.MaintenanceDate;
+                TextBoxTypeOfWork.Text = selectedMaintenance.TypeOfWork;
+                ComboBoxMaintenanceStatus.SelectedValue = selectedMaintenance.MaintenanceStatus_ID;
+                ComboBoxTechnique.SelectedValue = selectedMaintenance.Technique_ID;
+            }
+        }
+
+        private void ClearFields()
+        {
+           
+            TextBoxMaintenanceDate.Clear();
+            TextBoxTypeOfWork.Clear();
+            ComboBoxMaintenanceStatus.SelectedIndex = -1;
+            ComboBoxTechnique.SelectedIndex = -1;
+        }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+         
             var adminWindow = new AdminWindow();
             adminWindow.Show();
             this.Close();
@@ -208,10 +157,7 @@ namespace Fitnes
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            TextBoxMaintenanceDate.Text = null;
-            TextBoxTypeOfWork.Text = null;
-            ComboBoxMaintenanceStatus.SelectedValue = null;
-            ComboBoxTechnique.SelectedValue = _selectedMaintenance.Technique_ID;
+            ClearFields(); 
         }
     }
 }

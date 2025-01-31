@@ -32,7 +32,7 @@ Background="#FCC874">
                 <RowDefinition Height="20"/>
             </Grid.RowDefinitions>
 
-            <TextBlock Text="Руководитель" Grid.Row="0" FontSize="30" FontWeight="Bold" Foreground="#CCA15D" HorizontalAlignment="Center" Margin="0,-95,0,79" Width="206"/>
+            <TextBlock Text="Директор" Grid.Row="0" FontSize="30" FontWeight="Bold" Foreground="#CCA15D" HorizontalAlignment="Center" Margin="0,-95,0,98" Width="148"/>
 
             <Button Content="Таблица с заказами" Height="50" Width="280" Background="#FCC874" FontSize="16" FontWeight="Bold" BorderThickness="0" Foreground="Black" Grid.Row="0" Click="Button_Click_2"/>
             <Button Content="Таблица с тех обслуживанием" Height="50" Width="280" Background="#FCC874" FontSize="16" FontWeight="Bold" BorderThickness="0" Foreground="Black" Grid.Row="2" Click="Button_Click_3"/>

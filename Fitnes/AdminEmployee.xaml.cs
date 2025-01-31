@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.Data.Entity;
 using System.Linq;
 using System.Windows;
@@ -8,57 +6,13 @@ using System.Windows.Controls;
 
 namespace Fitnes
 {
-    public partial class AdminEmployee : Window, INotifyPropertyChanged
+    public partial class AdminEmployee : Window
     {
-        private ObservableCollection<Employees> _employees;
-        private ObservableCollection<JobTitle> _jobTitles;
-        private Employees _selectedEmployee;
-
-        public ObservableCollection<Employees> Employees
-        {
-            get => _employees;
-            set
-            {
-                _employees = value;
-                OnPropertyChanged(nameof(Employees));
-            }
-        }
-
-        public ObservableCollection<JobTitle> JobTitles
-        {
-            get => _jobTitles;
-            set
-            {
-                _jobTitles = value;
-                OnPropertyChanged(nameof(JobTitles));
-            }
-        }
-
-        public Employees SelectedEmployee
-        {
-            get => _selectedEmployee;
-            set
-            {
-                _selectedEmployee = value;
-                OnPropertyChanged(nameof(SelectedEmployee));
-            
-                if (_selectedEmployee != null)
-                {
-                    TextBoxEmployeeName.Text = _selectedEmployee.EmployeeName;
-                    TextBoxEmployeeSurname.Text = _selectedEmployee.EmployeeSurname;
-                    TextBoxEmployeeMiddlename.Text = _selectedEmployee.EmployeeMiddlename;
-                    TextBoxPhoneNumber.Text = _selectedEmployee.PhoneNumber;
-                    TextBoxEmail.Text = _selectedEmployee.Email;
-                    TextBoxPassword.Text = _selectedEmployee.Password;
-                    ComboBoxJobTitle.SelectedValue = _selectedEmployee.JobTitle_ID;
-                }
-            }
-        }
+        private FitnesEntities1 _context = new FitnesEntities1(); 
 
         public AdminEmployee()
         {
             InitializeComponent();
-            DataContext = this;
             LoadData();
         }
 
@@ -66,17 +20,15 @@ namespace Fitnes
         {
             try
             {
-                using (var context = new FitnesEntities1())
-                {
-            
-                    Employees = new ObservableCollection<Employees>(context.Employees.Include(e => e.JobTitle).ToList());
-                    JobTitles = new ObservableCollection<JobTitle>(context.JobTitle.ToList());
-                    ComboBoxJobTitle.ItemsSource = JobTitles;
-                }
+                
+                _context.Employees.Load(); 
+                _context.JobTitle.Load(); 
+                dgrdEmployees.ItemsSource = _context.Employees.Local; 
+                ComboBoxJobTitle.ItemsSource = _context.JobTitle.Local; 
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка при загрузке данных: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}");
+                MessageBox.Show($"Ошибка при загрузке данных: {ex.Message}");
             }
         }
 
@@ -84,141 +36,121 @@ namespace Fitnes
         {
             try
             {
-            
-                if (string.IsNullOrWhiteSpace(TextBoxEmployeeName.Text) || string.IsNullOrWhiteSpace(TextBoxEmployeeSurname.Text) ||
-                    string.IsNullOrWhiteSpace(TextBoxPhoneNumber.Text) || string.IsNullOrWhiteSpace(TextBoxEmail.Text) ||
-                    string.IsNullOrWhiteSpace(TextBoxPassword.Text) || ComboBoxJobTitle.SelectedValue == null)
+                
+                var newEmployee = new Employees
                 {
-                    MessageBox.Show("Заполните все обязательные поля!", "Ошибка ввода данных");
-                    return;
-                }
+                    EmployeeName = TextBoxEmployeeName.Text,
+                    EmployeeSurname = TextBoxEmployeeSurname.Text,
+                    EmployeeMiddlename = TextBoxEmployeeMiddlename.Text,
+                    PhoneNumber = TextBoxPhoneNumber.Text,
+                    Email = TextBoxEmail.Text,
+                    Password = TextBoxPassword.Text,
+                    JobTitle_ID = (int)ComboBoxJobTitle.SelectedValue
+                };
 
-                using (var context = new FitnesEntities1())
-                {
-                    var newEmployee = new Employees
-                    {
-                        EmployeeName = TextBoxEmployeeName.Text,
-                        EmployeeSurname = TextBoxEmployeeSurname.Text,
-                        EmployeeMiddlename = TextBoxEmployeeMiddlename.Text,
-                        PhoneNumber = TextBoxPhoneNumber.Text,
-                        Email = TextBoxEmail.Text,
-                        Password = TextBoxPassword.Text,
-                        JobTitle_ID = (int)ComboBoxJobTitle.SelectedValue
-                    };
+                _context.Employees.Add(newEmployee); 
+                _context.SaveChanges(); 
 
-                    context.Employees.Add(newEmployee);
-                    context.SaveChanges();
-
-     
-                    Employees.Add(newEmployee);
-                    MessageBox.Show("Сотрудник успешно добавлен!", "Успех");
-                }
+                LoadData(); 
+                ClearFields(); 
+                MessageBox.Show("Сотрудник успешно добавлен!", "Успех");
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка при добавлении сотрудника: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}");
+                MessageBox.Show($"Ошибка при добавлении сотрудника: {ex.Message}");
             }
         }
 
         private void ButtonEdit_Click(object sender, RoutedEventArgs e)
         {
-            if (SelectedEmployee == null)
+            if (dgrdEmployees.SelectedItem is Employees selectedEmployee)
             {
-                MessageBox.Show("Выберите сотрудника для редактирования!", "Ошибка выбора");
-                return;
-            }
-
-            try
-            {
-            
-                if (string.IsNullOrWhiteSpace(TextBoxEmployeeName.Text) || string.IsNullOrWhiteSpace(TextBoxEmployeeSurname.Text) ||
-                    string.IsNullOrWhiteSpace(TextBoxPhoneNumber.Text) || string.IsNullOrWhiteSpace(TextBoxEmail.Text) ||
-                    string.IsNullOrWhiteSpace(TextBoxPassword.Text) || ComboBoxJobTitle.SelectedValue == null)
+                try
                 {
-                    MessageBox.Show("Заполните все обязательные поля!", "Ошибка ввода данных");
-                    return;
+                    
+                    selectedEmployee.EmployeeName = TextBoxEmployeeName.Text;
+                    selectedEmployee.EmployeeSurname = TextBoxEmployeeSurname.Text;
+                    selectedEmployee.EmployeeMiddlename = TextBoxEmployeeMiddlename.Text;
+                    selectedEmployee.PhoneNumber = TextBoxPhoneNumber.Text;
+                    selectedEmployee.Email = TextBoxEmail.Text;
+                    selectedEmployee.Password = TextBoxPassword.Text;
+                    selectedEmployee.JobTitle_ID = (int)ComboBoxJobTitle.SelectedValue;
+
+                    _context.SaveChanges(); 
+                    LoadData(); 
+                    MessageBox.Show("Сотрудник успешно изменен!", "Успех");
                 }
-
-                using (var context = new FitnesEntities1())
+                catch (Exception ex)
                 {
-                    var employeeToUpdate = context.Employees.Find(SelectedEmployee.ID_Employees);
-                    if (employeeToUpdate != null)
-                    {
-                        employeeToUpdate.EmployeeName = TextBoxEmployeeName.Text;
-                        employeeToUpdate.EmployeeSurname = TextBoxEmployeeSurname.Text;
-                        employeeToUpdate.EmployeeMiddlename = TextBoxEmployeeMiddlename.Text;
-                        employeeToUpdate.PhoneNumber = TextBoxPhoneNumber.Text;
-                        employeeToUpdate.Email = TextBoxEmail.Text;
-                        employeeToUpdate.Password = TextBoxPassword.Text;
-                        employeeToUpdate.JobTitle_ID = (int)ComboBoxJobTitle.SelectedValue;
-
-                        context.SaveChanges();
-
-            
-                        var index = Employees.IndexOf(SelectedEmployee);
-                        Employees[index] = employeeToUpdate;
-                        MessageBox.Show("Сотрудник успешно изменен!", "Успех");
-                    }
+                    MessageBox.Show($"Ошибка при редактировании сотрудника: {ex.Message}");
                 }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show($"Ошибка при редактировании сотрудника: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}");
+                MessageBox.Show("Выберите сотрудника для редактирования!", "Ошибка");
             }
         }
 
         private void ButtonDelete_Click(object sender, RoutedEventArgs e)
         {
-            if (SelectedEmployee == null)
+            if (dgrdEmployees.SelectedItem is Employees selectedEmployee)
             {
-                MessageBox.Show("Выберите сотрудника для удаления!", "Ошибка выбора");
-                return;
-            }
-
-            try
-            {
-                using (var context = new FitnesEntities1())
+                try
                 {
-                    var employeeToDelete = context.Employees.Find(SelectedEmployee.ID_Employees);
-                    if (employeeToDelete != null)
-                    {
-                        context.Employees.Remove(employeeToDelete);
-                        context.SaveChanges();
-
-               
-                        Employees.Remove(SelectedEmployee);
-                        MessageBox.Show("Сотрудник успешно удален!", "Успех");
-                    }
+                    _context.Employees.Remove(selectedEmployee); 
+                    _context.SaveChanges(); 
+                    LoadData(); 
+                    MessageBox.Show("Сотрудник успешно удален!", "Успех");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ошибка при удалении сотрудника: {ex.Message}");
                 }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show($"Ошибка при удалении сотрудника: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}");
+                MessageBox.Show("Выберите сотрудника для удаления!", "Ошибка");
             }
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected void OnPropertyChanged(string propertyName) =>
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-
-       
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void dgrdEmployees_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            TextBoxEmployeeName.Text = null;
-            TextBoxEmployeeSurname.Text = null;
-            TextBoxEmployeeMiddlename.Text = null;
-            TextBoxPhoneNumber.Text = null;
-            TextBoxEmail.Text = null;
-            TextBoxPassword.Text = null;
-            ComboBoxJobTitle.SelectedValue = null;
+            if (dgrdEmployees.SelectedItem is Employees selectedEmployee)
+            {
+                
+                TextBoxEmployeeName.Text = selectedEmployee.EmployeeName;
+                TextBoxEmployeeSurname.Text = selectedEmployee.EmployeeSurname;
+                TextBoxEmployeeMiddlename.Text = selectedEmployee.EmployeeMiddlename;
+                TextBoxPhoneNumber.Text = selectedEmployee.PhoneNumber;
+                TextBoxEmail.Text = selectedEmployee.Email;
+                TextBoxPassword.Text = selectedEmployee.Password;
+                ComboBoxJobTitle.SelectedValue = selectedEmployee.JobTitle_ID;
+            }
+        }
+
+        private void ClearFields()
+        {
+          
+            TextBoxEmployeeName.Clear();
+            TextBoxEmployeeSurname.Clear();
+            TextBoxEmployeeMiddlename.Clear();
+            TextBoxPhoneNumber.Clear();
+            TextBoxEmail.Clear();
+            TextBoxPassword.Clear();
+            ComboBoxJobTitle.SelectedIndex = -1;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+           
             var adminWindow = new AdminWindow();
             adminWindow.Show();
             this.Close();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            ClearFields(); 
         }
     }
 }

@@ -49,7 +49,7 @@ Background="#FCC874" Height="50">
             </Button>
         </DockPanel>
 
-        <DataGrid Grid.Row="1" Grid.Column="0" Margin="0,0,20,20" Background="#FFE9A3"  IsReadOnly="true"
+        <DataGrid Grid.Row="1" Grid.Column="0" Margin="0,0,20,20" Background="#FFE9A3"  IsReadOnly="true" x:Name="dgrdTechnique" SelectionChanged="dgrdTechnique_SelectionChanged"
                   ItemsSource="{Binding Techniques}" SelectedItem="{Binding SelectedTechnique, Mode=TwoWay}" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Номер техники" Binding="{Binding TechnicianNumber}"/>
@@ -67,11 +67,11 @@ Background="#FCC874" Height="50">
             </Grid.RowDefinitions>
 
             <StackPanel VerticalAlignment="Top" Margin="10">
-                <TextBox x:Name="TextBoxTechnicianNumber" materialDesign:HintAssist.Hint="Номер техники" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
-                <TextBox x:Name="TextBoxTechniqueName" materialDesign:HintAssist.Hint="Название техники" Height="30" Margin="0,5" Background="White"  BorderBrush="White"  />
-                <TextBox x:Name="TextBoxTechniqueModel" materialDesign:HintAssist.Hint="Модель техники" Height="30" Margin="0,5" Background="White" BorderBrush="White"  />
-                <TextBox x:Name="TextBoxYearOfManufacture" materialDesign:HintAssist.Hint="Год выпуска" Height="30" Margin="0,5" Background="White" BorderBrush="White"  />
-                <TextBox x:Name="TextBoxRentalCost" materialDesign:HintAssist.Hint="Стоимость аренды" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
+                <TextBox x:Name="TextBoxTechnicianNumber" Padding="5" materialDesign:HintAssist.Hint="Номер техники" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
+                <TextBox x:Name="TextBoxTechniqueName" Padding="5" materialDesign:HintAssist.Hint="Название техники" Height="30" Margin="0,5" Background="White"  BorderBrush="White"  />
+                <TextBox x:Name="TextBoxTechniqueModel" Padding="5" materialDesign:HintAssist.Hint="Модель техники" Height="30" Margin="0,5" Background="White" BorderBrush="White"  />
+                <TextBox x:Name="TextBoxYearOfManufacture" Padding="5" materialDesign:HintAssist.Hint="Год выпуска" Height="30" Margin="0,5" Background="White" BorderBrush="White"  />
+                <TextBox x:Name="TextBoxRentalCost" Padding="5" materialDesign:HintAssist.Hint="Стоимость аренды" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
                 <ComboBox
                 materialDesign:HintAssist.Hint="Состояние"    
 x:Name="ComboBoxState"

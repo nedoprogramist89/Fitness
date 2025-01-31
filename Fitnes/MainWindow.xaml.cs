@@ -8,119 +8,58 @@ namespace Fitnes
 {
     public partial class MainWindow : Window
     {
+        FitnesEntities1 yp = new FitnesEntities1();
         public MainWindow()
         {
             InitializeComponent();
-
-            InitializePlaceholders();
         }
 
-        private void InitializePlaceholders()
+        private void Auth(object sender, RoutedEventArgs e)
         {
-            SetPlaceholder(EmailTextBox, "Почта");
+            var vxod = yp.Employees.ToList();
+            bool avtoriz = false;
 
-            PasswordBox.GotFocus += (sender, e) => RemovePasswordPlaceholder();
-            PasswordBox.LostFocus += (sender, e) => AddPasswordPlaceholder();
-            PasswordBox.PasswordChanged += (sender, e) => HidePasswordPlaceholder();
-        }
-
-        private void SetPlaceholder(TextBox textBox, string placeholderText)
-        {
-            textBox.Text = placeholderText;
-            textBox.Foreground = (Brush)new BrushConverter().ConvertFrom("#CCA15D"); 
-            textBox.GotFocus += (sender, e) => RemoveText(textBox, placeholderText);
-            textBox.LostFocus += (sender, e) => AddText(textBox, placeholderText);
-        }
-
-        private void RemoveText(TextBox textBox, string placeholderText)
-        {
-            if (textBox.Text == placeholderText)
+            if (string.IsNullOrWhiteSpace(EmailTextBox.Text) || string.IsNullOrWhiteSpace(PasswordBox.Password))
             {
-                textBox.Text = "";
-            }
-        }
-
-        private void AddText(TextBox textBox, string placeholderText)
-        {
-            if (string.IsNullOrWhiteSpace(textBox.Text))
-            {
-                textBox.Text = placeholderText;
-               
-            }
-        }
-
-        private void RemovePasswordPlaceholder()
-        {
-            PasswordPlaceholder.Visibility = Visibility.Collapsed;
-            PasswordBox.Focus();
-        }
-
-        private void AddPasswordPlaceholder()
-        {
-            if (string.IsNullOrEmpty(PasswordBox.Password))
-            {
-                PasswordPlaceholder.Visibility = Visibility.Visible;
-            }
-        }
-
-        private void HidePasswordPlaceholder()
-        {
-            if (!string.IsNullOrEmpty(PasswordBox.Password))
-            {
-                PasswordPlaceholder.Visibility = Visibility.Collapsed;
-            }
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            string email = EmailTextBox.Text;
-            string password = PasswordBox.Password;
-
-
-            if (email == "Почта" || string.IsNullOrEmpty(password))
-            {
-                MessageBox.Show("Заполните все поля!", "Ошибка");
+                MessageBox.Show("Пожалуйста, заполните все поля.");
                 return;
             }
 
-            using (var context = new FitnesEntities1())
+            foreach (var v in vxod)
             {
-                var employee = context.Employees
-                    .FirstOrDefault(emp => emp.Email == email && emp.Password == password);
-
-                if (employee != null)
+                if (v.Email == EmailTextBox.Text && v.Password == PasswordBox.Password)
                 {
-                    MessageBox.Show($"Добро пожаловать, {employee.EmployeeName}!", "Успешная авторизация");
+                    avtoriz = true;
 
-
-                    switch (employee.JobTitle.JobTitle1)
+                    if (v.JobTitle_ID == 1)
                     {
-                        case "Администратор":
-                            var adminWindow = new AdminWindow();
-                            adminWindow.Show();
-                            break;
-
-                        case "Техник":
-                            var technicianWindow = new TechnicianWindow();
-                            technicianWindow.Show();
-                            break;
-
-                        case "Директор":
-                            var directorWindow = new DirectorWindow();
-                            directorWindow.Show();
-                            break;
-
-                        default:
-                            MessageBox.Show("Роль пользователя не распознана!", "Ошибка");
-                            break;
+                        AdminWindow admin = new AdminWindow();
+                        admin.Show();
+                        this.Close();
+                    }
+                    else if (v.JobTitle_ID == 2)
+                    {
+                        DirectorWindow direktor = new DirectorWindow();
+                        direktor.Show();
+                        this.Close();
+                    }
+                    else if (v.JobTitle_ID == 3)
+                    {
+                        TechnicianWindow technik = new TechnicianWindow();
+                        technik.Show();
+                        this.Close();
                     }
 
-                    this.Close();
+                    Close();
+                    break;
                 }
-                else
-                {
-                    MessageBox.Show("Неверный email или пароль!", "Ошибка авторизации");
-                }
+            }
+
+            if (!avtoriz)
+            {
+                MessageBox.Show("Такого логина/пароля не существует. Попробуйте еще раз.");
+                EmailTextBox.Text = null;
+                PasswordBox.Password = null;
             }
         }
 

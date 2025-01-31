@@ -4,7 +4,6 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         Title="Управление сотрудниками" WindowState="Maximized" Background="#FFFDEFD4" MinHeight="780" MinWidth="1080">
     <Grid>
-       
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -15,48 +14,44 @@
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
 
-       
         <DockPanel LastChildFill="False" Background="#FFF8DC" Height="50" VerticalAlignment="Center" Grid.ColumnSpan="2">
-        
             <Button
-IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
-ToolTip="MaterialDesignFloatingActionSecondaryButton"
-Width="55"
-Height="50"
-Click="Button_Click"
-   
-Background="#FCC874">
+                IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                ToolTip="MaterialDesignFloatingActionSecondaryButton"
+                Width="55"
+                Height="50"
+                Click="Button_Click"
+                Background="#FCC874">
                 <materialDesign:PackIcon Kind="ArrowLeft" />
             </Button>
 
-         
             <TextBlock 
-           VerticalAlignment="Center" 
-           FontSize="16" 
-           FontWeight="SemiBold" 
-           Foreground="#CCA15D" 
-           Margin="10,0" ><Run Text="Управление сотрудниками"/></TextBlock>
+                VerticalAlignment="Center" 
+                FontSize="16" 
+                FontWeight="SemiBold" 
+                Foreground="#CCA15D" 
+                Margin="10,0">
+                <Run Text="Управление сотрудниками"/>
+            </TextBlock>
             <Button
-IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource AncestorType={x:Type Window}, Mode=FindAncestor}}"
-ToolTip="MaterialDesignFloatingActionSecondaryButton"
-Click="Button_Click_1"
-DockPanel.Dock="Right"
-Width="60"
-
-Background="#FCC874" Height="50">
+                IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource AncestorType={x:Type Window}, Mode=FindAncestor}}"
+                ToolTip="MaterialDesignFloatingActionSecondaryButton"
+                Click="Button_Click_1"
+                DockPanel.Dock="Right"
+                Width="60"
+                Background="#FCC874" Height="50">
                 <materialDesign:PackIcon 
-    Kind="DeleteOutline"
-    Height="31"
-    Width="55"
-    HorizontalAlignment="Center"
-    VerticalAlignment="Center" />
+                    Kind="DeleteOutline"
+                    Height="31"
+                    Width="55"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center" />
             </Button>
-        
         </DockPanel>
 
-      
-        <DataGrid Grid.Column="0" Margin="0,0,20,20" Background="#FFE9A3"   IsReadOnly="true"
-                  ItemsSource="{Binding Employees}" SelectedItem="{Binding SelectedEmployee, Mode=TwoWay}" AutoGenerateColumns="False" Grid.Row="1">
+        <DataGrid Grid.Column="0" Margin="0,0,20,20" Background="#FFE9A3" IsReadOnly="true"
+                  x:Name="dgrdEmployees" SelectionChanged="dgrdEmployees_SelectionChanged"
+                  AutoGenerateColumns="False" Grid.Row="1">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Имя" Binding="{Binding EmployeeName}"/>
                 <DataGridTextColumn Header="Фамилия" Binding="{Binding EmployeeSurname}"/>
@@ -67,32 +62,29 @@ Background="#FCC874" Height="50">
             </DataGrid.Columns>
         </DataGrid>
 
-        <!-- Правая часть с кнопками и текстовыми полями -->
         <Grid Grid.Row="1" Grid.Column="1" Margin="10">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-          
             <StackPanel VerticalAlignment="Top" Margin="10">
-
-                <TextBox x:Name="TextBoxEmployeeName" materialDesign:HintAssist.Hint="Имя" Height="30" Margin="0,5" Background="White" BorderBrush="White"  />
-                <TextBox x:Name="TextBoxEmployeeSurname" materialDesign:HintAssist.Hint="Фамилия" Height="30" Margin="0,5" Background="White"  BorderBrush="White" />
-                <TextBox x:Name="TextBoxEmployeeMiddlename" materialDesign:HintAssist.Hint="Отчёства" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
-                <TextBox x:Name="TextBoxPhoneNumber" materialDesign:HintAssist.Hint="Телефон" Height="30" Margin="0,5" Background="White"  BorderBrush="White"/>
-                <TextBox x:Name="TextBoxEmail" materialDesign:HintAssist.Hint="Почта" Height="30" Margin="0,5" Background="White"  BorderBrush="White" />
-                <TextBox x:Name="TextBoxPassword" materialDesign:HintAssist.Hint="Пароль" Height="30" Margin="0,5" Background="White"  BorderBrush="White" />
+                <TextBox x:Name="TextBoxEmployeeName" Padding="5" materialDesign:HintAssist.Hint="Имя" Height="30" Margin="0,5" Background="White" BorderBrush="White"  />
+                <TextBox x:Name="TextBoxEmployeeSurname" Padding="5" materialDesign:HintAssist.Hint="Фамилия" Height="30" Margin="0,5" Background="White"  BorderBrush="White" />
+                <TextBox x:Name="TextBoxEmployeeMiddlename" Padding="5" materialDesign:HintAssist.Hint="Отчество" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
+                <TextBox x:Name="TextBoxPhoneNumber" Padding="5" materialDesign:HintAssist.Hint="Телефон" Height="30" Margin="0,5" Background="White"  BorderBrush="White"/>
+                <TextBox x:Name="TextBoxEmail" Padding="5" materialDesign:HintAssist.Hint="Почта" Height="30" Margin="0,5" Background="White"  BorderBrush="White" />
+                <TextBox x:Name="TextBoxPassword" Padding="5" materialDesign:HintAssist.Hint="Пароль" Height="30" Margin="0,5" Background="White"  BorderBrush="White" />
                 <ComboBox
-    x:Name="ComboBoxJobTitle"
-    materialDesign:HintAssist.Hint="Должность"
-    Margin="0,5"
-    Style="{StaticResource MaterialDesignOutlinedComboBox}"
-    Background="White"
-    DisplayMemberPath="JobTitle1"
-    SelectedValuePath="ID_JobTitle"
-    SelectedValue="{Binding JobTitle_ID}">
+                    x:Name="ComboBoxJobTitle"
+                    materialDesign:HintAssist.Hint="Должность"
+                    Margin="0,5"
+                    Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                    Background="White"
+                    DisplayMemberPath="JobTitle1"
+                    SelectedValuePath="ID_JobTitle"
+                    SelectedValue="{Binding JobTitle_ID}">
                 </ComboBox>
-              
+
                 <Button Content="Добавление" Height="40" Margin="0,20,0,0" Background="#FCC874" FontSize="16" FontWeight="Bold" BorderThickness="0" Foreground="Black" Click="ButtonAdd_Click"/>
                 <Button Content="Изменение" Height="40" Margin="0,20,0,0" Background="#FCC874" FontSize="16" FontWeight="Bold" BorderThickness="0" Foreground="Black" Click="ButtonEdit_Click"/>
                 <Button Content="Удаление" Height="40" Margin="0,20,0,0" Background="#FCC874" FontSize="16" FontWeight="Bold" BorderThickness="0" Foreground="Black" Click="ButtonDelete_Click"/>

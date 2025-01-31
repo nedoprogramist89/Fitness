@@ -54,8 +54,8 @@
           
         </DockPanel>
 
-       
-        <DataGrid Grid.Row="1" Grid.Column="0" Margin="10,0,10,20" Background="#FFE9A3"   IsReadOnly="true"
+
+        <DataGrid Grid.Row="1" Grid.Column="0" Margin="10,0,10,20" Background="#FFE9A3"   IsReadOnly="true" x:Name="dgrdClients" SelectionChanged="dgrdClients_SelectionChanged"
                   ItemsSource="{Binding Clients}" SelectedItem="{Binding SelectedClient, Mode=TwoWay}" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Название компании" Binding="{Binding CompanyName}"/>
@@ -78,14 +78,14 @@
            
             <StackPanel VerticalAlignment="Top" Margin="10">
 
-                <TextBox x:Name="TextBoxCompanyName" materialDesign:HintAssist.Hint="Название компании" Height="30" Margin="0,5" Background="White" BorderBrush="White"  />
-                <TextBox x:Name="TextBoxPhoneNumber" materialDesign:HintAssist.Hint="Номер телефона" Height="30" Margin="0,5" Background="White" BorderBrush="White"/>
-                <TextBox x:Name="TextBoxAddress" materialDesign:HintAssist.Hint="Адресс" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
-                <TextBox x:Name="TextBoxEmail" materialDesign:HintAssist.Hint="Почта" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
-                <TextBox x:Name="TextBoxContactPersonName" materialDesign:HintAssist.Hint="Имя" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
-                <TextBox x:Name="TextBoxContactPersonSurname" materialDesign:HintAssist.Hint="Фамилия" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
-                <TextBox x:Name="TextBoxContactPersonMiddlename" materialDesign:HintAssist.Hint="Отчество" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
-                <TextBox x:Name="TextBoxContractNumber" materialDesign:HintAssist.Hint="Номер договора" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
+                <TextBox x:Name="TextBoxCompanyName" Padding="5" materialDesign:HintAssist.Hint="Название компании" Height="30" Margin="0,5" Background="White" BorderBrush="White"  />
+                <TextBox x:Name="TextBoxPhoneNumber" Padding="5" materialDesign:HintAssist.Hint="Номер телефона" Height="30" Margin="0,5" Background="White" BorderBrush="White"/>
+                <TextBox x:Name="TextBoxAddress" Padding="5" materialDesign:HintAssist.Hint="Адресс" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
+                <TextBox x:Name="TextBoxEmail" Padding="5" materialDesign:HintAssist.Hint="Почта" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
+                <TextBox x:Name="TextBoxContactPersonName" Padding="5" materialDesign:HintAssist.Hint="Имя" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
+                <TextBox x:Name="TextBoxContactPersonSurname" Padding="5" materialDesign:HintAssist.Hint="Фамилия" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
+                <TextBox x:Name="TextBoxContactPersonMiddlename" Padding="5" materialDesign:HintAssist.Hint="Отчество" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
+                <TextBox x:Name="TextBoxContractNumber" Padding="5" materialDesign:HintAssist.Hint="Номер договора" Height="30" Margin="0,5" Background="White" BorderBrush="White" />
 
 
 

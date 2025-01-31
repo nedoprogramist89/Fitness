@@ -3,32 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\technicianwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\technicianwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\admintechnique.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\admintechnique.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\adminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\adminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\directorwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\directorwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\directorwindowmaintenance.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\directorwindowmaintenance.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\directorwindoworder.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\directorwindoworder.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\directorwindowotcheti.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\directorwindowotcheti.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\directorwindowotcheti.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\directorwindowotcheti.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\directorwindoworder.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\directorwindoworder.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\directorwindowmaintenance.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\directorwindowmaintenance.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\technicianwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\technicianwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\directorwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\directorwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\adminwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\adminwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\admintechnique.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -47,60 +55,96 @@
       "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\adminemployee.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\adminemployee.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\adminemployee.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\adminclients.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\adminclients.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\technicianwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\technicianwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\directorwindowotcheti.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\directorwindowotcheti.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\directorwindoworder.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\directorwindoworder.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\directorwindowmaintenance.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\directorwindowmaintenance.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\directorwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\directorwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\adminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\adminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\admintechnique.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\admintechnique.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|c:\\users\\\u0434\u0430\u043C\u0438\u0440\\source\\repos\\fitnes\\fitnes\\adminorder.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\adminorder.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\adminmaintenance.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\adminmaintenance.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\adminclients.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\adminclients.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|c:\\users\\\u0434\u0430\u043C\u0438\u0440\\source\\repos\\fitnes\\fitnes\\technicianwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\technicianwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\directorwindoworder.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\directorwindoworder.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\directorwindowmaintenance.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\directorwindowmaintenance.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\adminwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\adminwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\adminmaintenance.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\adminmaintenance.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\adminemployee.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\adminemployee.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\adminorder.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\adminorder.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\employees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\employees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\technique.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\technique.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\states.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\states.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\orderstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\orderstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\orders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\orders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\maintenancestatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\maintenancestatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\maintenance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\maintenance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\jobtitle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\jobtitle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\fitness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\fitness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\clients.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\clients.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\fitness.context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\fitness.context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\fitness.tt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\fitness.tt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -119,42 +163,6 @@
       "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\orders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\orders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\clients.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\clients.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\orderstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\orderstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\technique.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\technique.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\maintenancestatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\maintenancestatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\maintenance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\maintenance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\states.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\states.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\jobtitle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\jobtitle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\fitness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\fitness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\fitness.context.tt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\fitness.context.tt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
@@ -164,14 +172,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\fitness.edmx.diagram||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\fitness.edmx.diagram||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\fitness.context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\fitness.context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\fitnes\\fitness.tt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{39612770-264F-4E73-880C-E87AF53F10D7}|Fitnes\\Fitnes.csproj|solutionrelative:fitnes\\fitness.tt||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -180,7 +180,7 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
+          "DockedWidth": 24,
           "SelectedChildIndex": -1,
           "Children": [
             {
@@ -214,6 +214,10 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             }
           ]
         },
@@ -228,7 +232,7 @@
           ]
         },
         {
-          "DockedWidth": 25,
+          "DockedWidth": 201,
           "SelectedChildIndex": 7,
           "Children": [
             {
@@ -248,232 +252,8 @@
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DirectorWindowOtcheti.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\DirectorWindowOtcheti.xaml.cs",
-              "RelativeDocumentMoniker": "Fitnes\\DirectorWindowOtcheti.xaml.cs",
-              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\DirectorWindowOtcheti.xaml.cs",
-              "RelativeToolTip": "Fitnes\\DirectorWindowOtcheti.xaml.cs",
-              "ViewState": "AQIAAOMAAAAAAAAAAAAUwOAAAABVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-26T18:23:33.302Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Fitnes\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\MainWindow.xaml.cs",
-              "RelativeToolTip": "Fitnes\\MainWindow.xaml.cs",
-              "ViewState": "AQIAAGoAAAAAAAAAAAAuwIMAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-25T23:04:27.494Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TechnicianWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\TechnicianWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Fitnes\\TechnicianWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\TechnicianWindow.xaml.cs",
-              "RelativeToolTip": "Fitnes\\TechnicianWindow.xaml.cs",
-              "ViewState": "AQIAACMAAAAAAAAAAAAgwDcAAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-26T13:24:50.171Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "DirectorWindowOrder.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\DirectorWindowOrder.xaml.cs",
-              "RelativeDocumentMoniker": "Fitnes\\DirectorWindowOrder.xaml.cs",
-              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\DirectorWindowOrder.xaml.cs",
-              "RelativeToolTip": "Fitnes\\DirectorWindowOrder.xaml.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAiwDAAAAB5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-26T13:42:13.497Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DirectorWindowMaintenance.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\DirectorWindowMaintenance.xaml.cs",
-              "RelativeDocumentMoniker": "Fitnes\\DirectorWindowMaintenance.xaml.cs",
-              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\DirectorWindowMaintenance.xaml.cs",
-              "RelativeToolTip": "Fitnes\\DirectorWindowMaintenance.xaml.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAQwC4AAAB5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-26T13:38:42.277Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DirectorWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\DirectorWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Fitnes\\DirectorWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\DirectorWindow.xaml.cs",
-              "RelativeToolTip": "Fitnes\\DirectorWindow.xaml.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAiwDoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-26T13:34:05.879Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AdminWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\AdminWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Fitnes\\AdminWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\AdminWindow.xaml.cs",
-              "RelativeToolTip": "Fitnes\\AdminWindow.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEoAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-25T23:52:28.798Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AdminTechnique.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\AdminTechnique.xaml.cs",
-              "RelativeDocumentMoniker": "Fitnes\\AdminTechnique.xaml.cs",
-              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\AdminTechnique.xaml.cs",
-              "RelativeToolTip": "Fitnes\\AdminTechnique.xaml.cs",
-              "ViewState": "AQIAALsAAAAAAAAAAADwv7oAAAB6AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-26T00:34:35.636Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "AdminOrder.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\AdminOrder.xaml.cs",
-              "RelativeDocumentMoniker": "Fitnes\\AdminOrder.xaml.cs",
-              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\AdminOrder.xaml.cs",
-              "RelativeToolTip": "Fitnes\\AdminOrder.xaml.cs",
-              "ViewState": "AQIAAEQBAAAAAAAAAAAqwBABAABQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-26T00:32:22.325Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AdminMaintenance.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\AdminMaintenance.xaml.cs",
-              "RelativeDocumentMoniker": "Fitnes\\AdminMaintenance.xaml.cs",
-              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\AdminMaintenance.xaml.cs",
-              "RelativeToolTip": "Fitnes\\AdminMaintenance.xaml.cs",
-              "ViewState": "AQIAAKAAAAAAAAAAAADwv8gAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-26T00:30:26.877Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AdminEmployee.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\AdminEmployee.xaml.cs",
-              "RelativeDocumentMoniker": "Fitnes\\AdminEmployee.xaml.cs",
-              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\AdminEmployee.xaml.cs",
-              "RelativeToolTip": "Fitnes\\AdminEmployee.xaml.cs",
-              "ViewState": "AQIAALUAAAAAAAAAAADwv8MAAAB9AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-26T00:27:01.105Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AdminEmployee.xaml",
-              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\AdminEmployee.xaml",
-              "RelativeDocumentMoniker": "Fitnes\\AdminEmployee.xaml",
-              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\AdminEmployee.xaml",
-              "RelativeToolTip": "Fitnes\\AdminEmployee.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-25T23:56:52.291Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "AdminClients.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\AdminClients.xaml.cs",
-              "RelativeDocumentMoniker": "Fitnes\\AdminClients.xaml.cs",
-              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\AdminClients.xaml.cs",
-              "RelativeToolTip": "Fitnes\\AdminClients.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAJQAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-26T00:04:58.726Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "TechnicianWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\TechnicianWindow.xaml",
-              "RelativeDocumentMoniker": "Fitnes\\TechnicianWindow.xaml",
-              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\TechnicianWindow.xaml",
-              "RelativeToolTip": "Fitnes\\TechnicianWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-25T23:35:44.65Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "Fitnes\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\MainWindow.xaml",
-              "RelativeToolTip": "Fitnes\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-25T23:04:27.825Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "DirectorWindowOtcheti.xaml",
-              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\DirectorWindowOtcheti.xaml",
-              "RelativeDocumentMoniker": "Fitnes\\DirectorWindowOtcheti.xaml",
-              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\DirectorWindowOtcheti.xaml",
-              "RelativeToolTip": "Fitnes\\DirectorWindowOtcheti.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-26T13:35:52.49Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "DirectorWindowOrder.xaml",
-              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\DirectorWindowOrder.xaml",
-              "RelativeDocumentMoniker": "Fitnes\\DirectorWindowOrder.xaml",
-              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\DirectorWindowOrder.xaml",
-              "RelativeToolTip": "Fitnes\\DirectorWindowOrder.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-26T13:34:55.704Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
               "Title": "DirectorWindowMaintenance.xaml",
               "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\DirectorWindowMaintenance.xaml",
               "RelativeDocumentMoniker": "Fitnes\\DirectorWindowMaintenance.xaml",
@@ -485,7 +265,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 2,
               "Title": "DirectorWindow.xaml",
               "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\DirectorWindow.xaml",
               "RelativeDocumentMoniker": "Fitnes\\DirectorWindow.xaml",
@@ -497,43 +277,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "packages.config",
-              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\packages.config",
-              "RelativeDocumentMoniker": "Fitnes\\packages.config",
-              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\packages.config",
-              "RelativeToolTip": "Fitnes\\packages.config",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAALAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-01-26T19:46:50.739Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\App.xaml",
-              "RelativeDocumentMoniker": "Fitnes\\App.xaml",
-              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\App.xaml",
-              "RelativeToolTip": "Fitnes\\App.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-26T23:57:56.873Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "Employees.cs",
-              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\Employees.cs",
-              "RelativeDocumentMoniker": "Fitnes\\Employees.cs",
-              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\Employees.cs",
-              "RelativeToolTip": "Fitnes\\Employees.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAkwCQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-25T23:26:58.195Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 1,
               "Title": "AdminWindow.xaml",
               "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\AdminWindow.xaml",
               "RelativeDocumentMoniker": "Fitnes\\AdminWindow.xaml",
@@ -545,44 +289,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "ResourcePart.cs",
-              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\AppData\\Local\\Temp\\.vsdbgsrc\\3714f74b82eacc6cf8dcf1e32980b0908d4f8b447d25d4eb08ff1424a7b57c02\\ResourcePart.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\3714f74b82eacc6cf8dcf1e32980b0908d4f8b447d25d4eb08ff1424a7b57c02\\ResourcePart.cs",
-              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\AppData\\Local\\Temp\\.vsdbgsrc\\3714f74b82eacc6cf8dcf1e32980b0908d4f8b447d25d4eb08ff1424a7b57c02\\ResourcePart.cs [\u0422\u043E\u043B\u044C\u043A\u043E \u0447\u0442\u0435\u043D\u0438\u0435]",
-              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\3714f74b82eacc6cf8dcf1e32980b0908d4f8b447d25d4eb08ff1424a7b57c02\\ResourcePart.cs [\u0422\u043E\u043B\u044C\u043A\u043E \u0447\u0442\u0435\u043D\u0438\u0435]",
-              "ViewState": "AQIAABgAAAAAAAAAAAAIwCsAAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T13:01:36.031Z",
-              "EditorCaption": " [\u0422\u043E\u043B\u044C\u043A\u043E \u0447\u0442\u0435\u043D\u0438\u0435]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "App.config",
-              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\App.config",
-              "RelativeDocumentMoniker": "Fitnes\\App.config",
-              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\App.config",
-              "RelativeToolTip": "Fitnes\\App.config",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-01-27T11:03:05.466Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "AdminClients.xaml",
-              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\AdminClients.xaml",
-              "RelativeDocumentMoniker": "Fitnes\\AdminClients.xaml",
-              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\AdminClients.xaml",
-              "RelativeToolTip": "Fitnes\\AdminClients.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-25T23:55:37.315Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 0,
               "Title": "AdminTechnique.xaml",
               "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\AdminTechnique.xaml",
               "RelativeDocumentMoniker": "Fitnes\\AdminTechnique.xaml",
@@ -594,19 +301,211 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "AdminOrder.xaml",
-              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\AdminOrder.xaml",
-              "RelativeDocumentMoniker": "Fitnes\\AdminOrder.xaml",
-              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\AdminOrder.xaml",
-              "RelativeToolTip": "Fitnes\\AdminOrder.xaml",
+              "DocumentIndex": 4,
+              "Title": "DirectorWindowOrder.xaml",
+              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\DirectorWindowOrder.xaml",
+              "RelativeDocumentMoniker": "Fitnes\\DirectorWindowOrder.xaml",
+              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\DirectorWindowOrder.xaml",
+              "RelativeToolTip": "Fitnes\\DirectorWindowOrder.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-25T23:55:59.5Z",
+              "WhenOpened": "2025-01-26T13:34:55.704Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 5,
+              "Title": "DirectorWindowOtcheti.xaml",
+              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\DirectorWindowOtcheti.xaml",
+              "RelativeDocumentMoniker": "Fitnes\\DirectorWindowOtcheti.xaml",
+              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\DirectorWindowOtcheti.xaml",
+              "RelativeToolTip": "Fitnes\\DirectorWindowOtcheti.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-26T13:35:52.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DirectorWindowOtcheti.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\DirectorWindowOtcheti.xaml.cs",
+              "RelativeDocumentMoniker": "Fitnes\\DirectorWindowOtcheti.xaml.cs",
+              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\DirectorWindowOtcheti.xaml.cs",
+              "RelativeToolTip": "Fitnes\\DirectorWindowOtcheti.xaml.cs",
+              "ViewState": "AQIAAKAAAAAAAAAAAAAuwBkAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T18:23:33.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TechnicianWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\TechnicianWindow.xaml",
+              "RelativeDocumentMoniker": "Fitnes\\TechnicianWindow.xaml",
+              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\TechnicianWindow.xaml",
+              "RelativeToolTip": "Fitnes\\TechnicianWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-25T23:35:44.65Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DirectorWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\DirectorWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Fitnes\\DirectorWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\DirectorWindow.xaml.cs",
+              "RelativeToolTip": "Fitnes\\DirectorWindow.xaml.cs",
+              "ViewState": "AQIAACMAAAAAAAAAAAAgwC4AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T13:34:05.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AdminTechnique.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\AdminTechnique.xaml.cs",
+              "RelativeDocumentMoniker": "Fitnes\\AdminTechnique.xaml.cs",
+              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\AdminTechnique.xaml.cs",
+              "RelativeToolTip": "Fitnes\\AdminTechnique.xaml.cs",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAgwA8AAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T00:34:35.636Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AdminOrder.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\AdminOrder.xaml.cs",
+              "RelativeDocumentMoniker": "Fitnes\\AdminOrder.xaml.cs",
+              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\AdminOrder.xaml.cs",
+              "RelativeToolTip": "Fitnes\\AdminOrder.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoBAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T00:32:22.325Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AdminMaintenance.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\AdminMaintenance.xaml.cs",
+              "RelativeDocumentMoniker": "Fitnes\\AdminMaintenance.xaml.cs",
+              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\AdminMaintenance.xaml.cs",
+              "RelativeToolTip": "Fitnes\\AdminMaintenance.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAJ8AAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T00:30:26.877Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AdminEmployee.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\AdminEmployee.xaml.cs",
+              "RelativeDocumentMoniker": "Fitnes\\AdminEmployee.xaml.cs",
+              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\AdminEmployee.xaml.cs",
+              "RelativeToolTip": "Fitnes\\AdminEmployee.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAJgAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T00:27:01.105Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AdminClients.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\AdminClients.xaml.cs",
+              "RelativeDocumentMoniker": "Fitnes\\AdminClients.xaml.cs",
+              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\AdminClients.xaml.cs",
+              "RelativeToolTip": "Fitnes\\AdminClients.xaml.cs",
+              "ViewState": "AQIAAGMAAAAAAAAAAAAowJoAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T00:04:58.726Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AdminClients.xaml",
+              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\AdminClients.xaml",
+              "RelativeDocumentMoniker": "Fitnes\\AdminClients.xaml",
+              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\AdminClients.xaml",
+              "RelativeToolTip": "Fitnes\\AdminClients.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-25T23:55:37.315Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "TechnicianWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\TechnicianWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Fitnes\\TechnicianWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\TechnicianWindow.xaml.cs",
+              "RelativeToolTip": "Fitnes\\TechnicianWindow.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T13:24:50.171Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Fitnes\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Fitnes\\MainWindow.xaml.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAwBAAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-25T23:04:27.494Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "DirectorWindowOrder.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\DirectorWindowOrder.xaml.cs",
+              "RelativeDocumentMoniker": "Fitnes\\DirectorWindowOrder.xaml.cs",
+              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\DirectorWindowOrder.xaml.cs",
+              "RelativeToolTip": "Fitnes\\DirectorWindowOrder.xaml.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAQwCcAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T13:42:13.497Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "DirectorWindowMaintenance.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\DirectorWindowMaintenance.xaml.cs",
+              "RelativeDocumentMoniker": "Fitnes\\DirectorWindowMaintenance.xaml.cs",
+              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\DirectorWindowMaintenance.xaml.cs",
+              "RelativeToolTip": "Fitnes\\DirectorWindowMaintenance.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T13:38:42.277Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AdminWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\AdminWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Fitnes\\AdminWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\AdminWindow.xaml.cs",
+              "RelativeToolTip": "Fitnes\\AdminWindow.xaml.cs",
+              "ViewState": "AQIAAEkAAAAAAAAAAAAwwEoAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-25T23:52:28.798Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
               "Title": "AdminMaintenance.xaml",
               "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\AdminMaintenance.xaml",
               "RelativeDocumentMoniker": "Fitnes\\AdminMaintenance.xaml",
@@ -618,90 +517,77 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "Fitness.edmx [Diagram1]",
-              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\Fitness.edmx",
-              "RelativeDocumentMoniker": "Fitnes\\Fitness.edmx",
-              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\Fitness.edmx [Diagram1]",
-              "RelativeToolTip": "Fitnes\\Fitness.edmx [Diagram1]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
-              "WhenOpened": "2025-01-25T23:26:15.033Z"
+              "DocumentIndex": 21,
+              "Title": "AdminEmployee.xaml",
+              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\AdminEmployee.xaml",
+              "RelativeDocumentMoniker": "Fitnes\\AdminEmployee.xaml",
+              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\AdminEmployee.xaml",
+              "RelativeToolTip": "Fitnes\\AdminEmployee.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-25T23:56:52.291Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 22,
+              "Title": "AdminOrder.xaml",
+              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\AdminOrder.xaml",
+              "RelativeDocumentMoniker": "Fitnes\\AdminOrder.xaml",
+              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\AdminOrder.xaml",
+              "RelativeToolTip": "Fitnes\\AdminOrder.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-25T23:55:59.5Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Fitnes\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\MainWindow.xaml",
+              "RelativeToolTip": "Fitnes\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-25T23:04:27.825Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Employees.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\Employees.cs",
+              "RelativeDocumentMoniker": "Fitnes\\Employees.cs",
+              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\Employees.cs",
+              "RelativeToolTip": "Fitnes\\Employees.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-25T23:26:58.195Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
               "Title": "Technique.cs",
               "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\Technique.cs",
               "RelativeDocumentMoniker": "Fitnes\\Technique.cs",
               "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\Technique.cs",
               "RelativeToolTip": "Fitnes\\Technique.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAkwCYAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-26T00:33:19.907Z"
+              "WhenOpened": "2025-01-26T00:33:19.907Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "Orders.cs",
-              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\Orders.cs",
-              "RelativeDocumentMoniker": "Fitnes\\Orders.cs",
-              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\Orders.cs",
-              "RelativeToolTip": "Fitnes\\Orders.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAA3wBMAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-26T00:30:37.243Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "Clients.cs",
-              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\Clients.cs",
-              "RelativeDocumentMoniker": "Fitnes\\Clients.cs",
-              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\Clients.cs",
-              "RelativeToolTip": "Fitnes\\Clients.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAkwBcAAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-25T23:26:55.203Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "OrderStatus.cs",
-              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\OrderStatus.cs",
-              "RelativeDocumentMoniker": "Fitnes\\OrderStatus.cs",
-              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\OrderStatus.cs",
-              "RelativeToolTip": "Fitnes\\OrderStatus.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-26T18:21:36.411Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "MaintenanceStatus.cs",
-              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\MaintenanceStatus.cs",
-              "RelativeDocumentMoniker": "Fitnes\\MaintenanceStatus.cs",
-              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\MaintenanceStatus.cs",
-              "RelativeToolTip": "Fitnes\\MaintenanceStatus.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAA1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-26T18:21:42.619Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "Maintenance.cs",
-              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\Maintenance.cs",
-              "RelativeDocumentMoniker": "Fitnes\\Maintenance.cs",
-              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\Maintenance.cs",
-              "RelativeToolTip": "Fitnes\\Maintenance.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-26T00:28:50.49Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 26,
               "Title": "States.cs",
               "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\States.cs",
               "RelativeDocumentMoniker": "Fitnes\\States.cs",
@@ -709,11 +595,64 @@
               "RelativeToolTip": "Fitnes\\States.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-26T18:21:33.39Z"
+              "WhenOpened": "2025-01-26T18:21:33.39Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 27,
+              "Title": "OrderStatus.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\OrderStatus.cs",
+              "RelativeDocumentMoniker": "Fitnes\\OrderStatus.cs",
+              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\OrderStatus.cs",
+              "RelativeToolTip": "Fitnes\\OrderStatus.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T18:21:36.411Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Orders.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\Orders.cs",
+              "RelativeDocumentMoniker": "Fitnes\\Orders.cs",
+              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\Orders.cs",
+              "RelativeToolTip": "Fitnes\\Orders.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAQwCEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T00:30:37.243Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "MaintenanceStatus.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\MaintenanceStatus.cs",
+              "RelativeDocumentMoniker": "Fitnes\\MaintenanceStatus.cs",
+              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\MaintenanceStatus.cs",
+              "RelativeToolTip": "Fitnes\\MaintenanceStatus.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T18:21:42.619Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Maintenance.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\Maintenance.cs",
+              "RelativeDocumentMoniker": "Fitnes\\Maintenance.cs",
+              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\Maintenance.cs",
+              "RelativeToolTip": "Fitnes\\Maintenance.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T00:28:50.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
               "Title": "JobTitle.cs",
               "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\JobTitle.cs",
               "RelativeDocumentMoniker": "Fitnes\\JobTitle.cs",
@@ -721,11 +660,12 @@
               "RelativeToolTip": "Fitnes\\JobTitle.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-25T23:34:12.668Z"
+              "WhenOpened": "2025-01-25T23:34:12.668Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 32,
               "Title": "Fitness.cs",
               "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\Fitness.cs",
               "RelativeDocumentMoniker": "Fitnes\\Fitness.cs",
@@ -733,47 +673,38 @@
               "RelativeToolTip": "Fitnes\\Fitness.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-26T18:21:54.499Z"
+              "WhenOpened": "2025-01-26T18:21:54.499Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "Fitness.Context.tt",
-              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\Fitness.Context.tt",
-              "RelativeDocumentMoniker": "Fitnes\\Fitness.Context.tt",
-              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\Fitness.Context.tt",
-              "RelativeToolTip": "Fitnes\\Fitness.Context.tt",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-01-25T23:33:12.04Z"
+              "DocumentIndex": 33,
+              "Title": "Clients.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\Clients.cs",
+              "RelativeDocumentMoniker": "Fitnes\\Clients.cs",
+              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\Clients.cs",
+              "RelativeToolTip": "Fitnes\\Clients.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAkwCQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-25T23:26:55.203Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "Fitness.edmx.diagram",
-              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\Fitness.edmx.diagram",
-              "RelativeDocumentMoniker": "Fitnes\\Fitness.edmx.diagram",
-              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\Fitness.edmx.diagram",
-              "RelativeToolTip": "Fitnes\\Fitness.edmx.diagram",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-01-27T16:56:23.885Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 34,
               "Title": "Fitness.Context.cs",
               "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\Fitness.Context.cs",
               "RelativeDocumentMoniker": "Fitnes\\Fitness.Context.cs",
               "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\Fitness.Context.cs",
               "RelativeToolTip": "Fitnes\\Fitness.Context.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAAwB8AAAA9AAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAkwCYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-25T23:33:15.595Z"
+              "WhenOpened": "2025-01-25T23:33:15.595Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 35,
               "Title": "Fitness.tt",
               "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\Fitness.tt",
               "RelativeDocumentMoniker": "Fitnes\\Fitness.tt",
@@ -781,7 +712,97 @@
               "RelativeToolTip": "Fitnes\\Fitness.tt",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-01-26T18:22:03.885Z"
+              "WhenOpened": "2025-01-26T18:22:03.885Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "ResourcePart.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\AppData\\Local\\Temp\\.vsdbgsrc\\3714f74b82eacc6cf8dcf1e32980b0908d4f8b447d25d4eb08ff1424a7b57c02\\ResourcePart.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\3714f74b82eacc6cf8dcf1e32980b0908d4f8b447d25d4eb08ff1424a7b57c02\\ResourcePart.cs",
+              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\AppData\\Local\\Temp\\.vsdbgsrc\\3714f74b82eacc6cf8dcf1e32980b0908d4f8b447d25d4eb08ff1424a7b57c02\\ResourcePart.cs",
+              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\3714f74b82eacc6cf8dcf1e32980b0908d4f8b447d25d4eb08ff1424a7b57c02\\ResourcePart.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAIwCsAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-28T13:01:36.031Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\App.config",
+              "RelativeDocumentMoniker": "Fitnes\\App.config",
+              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\App.config",
+              "RelativeToolTip": "Fitnes\\App.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-01-27T11:03:05.466Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "packages.config",
+              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\packages.config",
+              "RelativeDocumentMoniker": "Fitnes\\packages.config",
+              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\packages.config",
+              "RelativeToolTip": "Fitnes\\packages.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-01-26T19:46:50.739Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\App.xaml",
+              "RelativeDocumentMoniker": "Fitnes\\App.xaml",
+              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\App.xaml",
+              "RelativeToolTip": "Fitnes\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-26T23:57:56.873Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "Fitness.edmx [Diagram1]",
+              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\Fitness.edmx",
+              "RelativeDocumentMoniker": "Fitnes\\Fitness.edmx",
+              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\Fitness.edmx [Diagram1]",
+              "RelativeToolTip": "Fitnes\\Fitness.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2025-01-25T23:26:15.033Z",
+              "EditorCaption": " [Diagram1]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Fitness.Context.tt",
+              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\Fitness.Context.tt",
+              "RelativeDocumentMoniker": "Fitnes\\Fitness.Context.tt",
+              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\Fitness.Context.tt",
+              "RelativeToolTip": "Fitnes\\Fitness.Context.tt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-01-25T23:33:12.04Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "Fitness.edmx.diagram",
+              "DocumentMoniker": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\Fitness.edmx.diagram",
+              "RelativeDocumentMoniker": "Fitnes\\Fitness.edmx.diagram",
+              "ToolTip": "C:\\Users\\\u0414\u0430\u043C\u0438\u0440\\source\\repos\\Fitnes\\Fitnes\\Fitness.edmx.diagram",
+              "RelativeToolTip": "Fitnes\\Fitness.edmx.diagram",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-01-27T16:56:23.885Z",
+              "EditorCaption": ""
             }
           ]
         }

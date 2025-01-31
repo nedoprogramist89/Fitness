@@ -1,58 +1,31 @@
 ﻿using System;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.Data.Entity;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Windows;
 
 namespace Fitnes
 {
-    public partial class TechnicianWindow : Window, INotifyPropertyChanged
+    public partial class TechnicianWindow : Window
     {
-        private ObservableCollection<Maintenance> _maintenances;
-
-        public ObservableCollection<Maintenance> Maintenances
-        {
-            get => _maintenances;
-            set
-            {
-                _maintenances = value;
-                OnPropertyChanged(nameof(Maintenances));
-            }
-        }
+        private FitnesEntities1 _context = new FitnesEntities1(); 
 
         public TechnicianWindow()
         {
             InitializeComponent();
-            DataContext = this;
-            LoadData();
+            _context.Maintenance
+                    .Include(m => m.MaintenanceStatus) 
+                    .Include(m => m.Technique) 
+                    .Load();
+
+            dgrdMaintenances.ItemsSource = _context.Maintenance.Local;
         }
 
-        private void LoadData()
-        {
-            try
-            {
-                using (var context = new FitnesEntities1())
-                {
-                    Maintenances = new ObservableCollection<Maintenance>(
-                        context.Maintenance
-                               .Include(m => m.MaintenanceStatus)
-                               .Include(m => m.Technique)
-                               .ToList());
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Ошибка при загрузке данных: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}");
-            }
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected void OnPropertyChanged(string propertyName) =>
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+       
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            
             var mainWindow = new MainWindow();
             mainWindow.Show();
             this.Close();

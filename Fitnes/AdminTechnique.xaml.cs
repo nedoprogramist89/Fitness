@@ -1,61 +1,18 @@
 ﻿using System;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.Data.Entity;
 using System.Linq;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace Fitnes
 {
-    public partial class AdminTechnique : Window, INotifyPropertyChanged
+    public partial class AdminTechnique : Window
     {
-        private ObservableCollection<Technique> _techniques;
-        private ObservableCollection<States> _statesList;
-        private Technique _selectedTechnique;
-
-        public ObservableCollection<Technique> Techniques
-        {
-            get => _techniques;
-            set
-            {
-                _techniques = value;
-                OnPropertyChanged(nameof(Techniques));
-            }
-        }
-
-        public ObservableCollection<States> StatesList
-        {
-            get => _statesList;
-            set
-            {
-                _statesList = value;
-                OnPropertyChanged(nameof(StatesList));
-            }
-        }
-
-        public Technique SelectedTechnique
-        {
-            get => _selectedTechnique;
-            set
-            {
-                _selectedTechnique = value;
-                OnPropertyChanged(nameof(SelectedTechnique));
-                if (_selectedTechnique != null)
-                {
-                    TextBoxTechnicianNumber.Text = _selectedTechnique.TechnicianNumber;
-                    TextBoxTechniqueName.Text = _selectedTechnique.TechniqueName;
-                    TextBoxTechniqueModel.Text = _selectedTechnique.TechniqueModel;
-                    TextBoxYearOfManufacture.Text = _selectedTechnique.YearOfManufacture;
-                    TextBoxRentalCost.Text = _selectedTechnique.RentalCost.ToString();
-                    ComboBoxState.SelectedValue = _selectedTechnique.State_ID;
-                }
-            }
-        }
+        private FitnesEntities1 context = new FitnesEntities1(); 
 
         public AdminTechnique()
         {
             InitializeComponent();
-            DataContext = this;
             LoadData();
         }
 
@@ -63,18 +20,17 @@ namespace Fitnes
         {
             try
             {
-                using (var context = new FitnesEntities1())
-                {
-                    Techniques = new ObservableCollection<Technique>(context.Technique.Include(t => t.States).ToList());
+                
+                var techniques = context.Technique
+                    .Include(t => t.States)
+                    .ToList();
 
-                    StatesList = new ObservableCollection<States>(context.States.ToList());
-
-                    ComboBoxState.ItemsSource = StatesList;
-                }
+                dgrdTechnique.ItemsSource = techniques; 
+                ComboBoxState.ItemsSource = context.States.ToList(); 
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка при загрузке данных: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}");
+                MessageBox.Show($"Ошибка при загрузке данных: {ex.Message}");
             }
         }
 
@@ -82,115 +38,105 @@ namespace Fitnes
         {
             try
             {
-                if (string.IsNullOrWhiteSpace(TextBoxTechnicianNumber.Text) || string.IsNullOrWhiteSpace(TextBoxTechniqueName.Text) ||
-                    string.IsNullOrWhiteSpace(TextBoxTechniqueModel.Text) || string.IsNullOrWhiteSpace(TextBoxYearOfManufacture.Text) ||
-                    string.IsNullOrWhiteSpace(TextBoxRentalCost.Text) || ComboBoxState.SelectedValue == null)
+               
+                var newTechnique = new Technique
                 {
-                    MessageBox.Show("Заполните все обязательные поля!", "Ошибка ввода данных");
-                    return;
-                }
+                    TechnicianNumber = TextBoxTechnicianNumber.Text,
+                    TechniqueName = TextBoxTechniqueName.Text,
+                    TechniqueModel = TextBoxTechniqueModel.Text,
+                    YearOfManufacture = TextBoxYearOfManufacture.Text,
+                    RentalCost = decimal.Parse(TextBoxRentalCost.Text),
+                    State_ID = (int)ComboBoxState.SelectedValue
+                };
 
-                using (var context = new FitnesEntities1())
-                {
-                    var newTechnique = new Technique
-                    {
-                        TechnicianNumber = TextBoxTechnicianNumber.Text,
-                        TechniqueName = TextBoxTechniqueName.Text,
-                        TechniqueModel = TextBoxTechniqueModel.Text,
-                        YearOfManufacture = TextBoxYearOfManufacture.Text,
-                        RentalCost = decimal.Parse(TextBoxRentalCost.Text),
-                        State_ID = (int)ComboBoxState.SelectedValue
-                    };
+                context.Technique.Add(newTechnique);
+                context.SaveChanges(); 
 
-                    context.Technique.Add(newTechnique);
-                    context.SaveChanges();
-
-                    Techniques.Add(newTechnique);
-                    MessageBox.Show("Техника успешно добавлена!", "Успех");
-                }
+                LoadData(); 
+                ClearFields(); 
+                MessageBox.Show("Техника успешно добавлена!", "Успех");
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка при добавлении техники: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}");
+                MessageBox.Show($"Ошибка при добавлении техники: {ex.Message}");
             }
         }
 
         private void ButtonEdit_Click(object sender, RoutedEventArgs e)
         {
-            if (SelectedTechnique == null)
+            if (dgrdTechnique.SelectedItem is Technique selectedTechnique)
             {
-                MessageBox.Show("Выберите технику для редактирования!", "Ошибка выбора");
-                return;
-            }
-
-            try
-            {
-                if (string.IsNullOrWhiteSpace(TextBoxTechnicianNumber.Text) || string.IsNullOrWhiteSpace(TextBoxTechniqueName.Text) ||
-                    string.IsNullOrWhiteSpace(TextBoxTechniqueModel.Text) || string.IsNullOrWhiteSpace(TextBoxYearOfManufacture.Text) ||
-                    string.IsNullOrWhiteSpace(TextBoxRentalCost.Text) || ComboBoxState.SelectedValue == null)
+                try
                 {
-                    MessageBox.Show("Заполните все обязательные поля!", "Ошибка ввода данных");
-                    return;
+                   
+                    selectedTechnique.TechnicianNumber = TextBoxTechnicianNumber.Text;
+                    selectedTechnique.TechniqueName = TextBoxTechniqueName.Text;
+                    selectedTechnique.TechniqueModel = TextBoxTechniqueModel.Text;
+                    selectedTechnique.YearOfManufacture = TextBoxYearOfManufacture.Text;
+                    selectedTechnique.RentalCost = decimal.Parse(TextBoxRentalCost.Text);
+                    selectedTechnique.State_ID = (int)ComboBoxState.SelectedValue;
+
+                    context.SaveChanges(); 
+                    LoadData(); 
+                    MessageBox.Show("Техника успешно изменена!", "Успех");
                 }
-
-                using (var context = new FitnesEntities1())
+                catch (Exception ex)
                 {
-                    var techniqueToUpdate = context.Technique.Find(SelectedTechnique.ID_Technique);
-                    if (techniqueToUpdate != null)
-                    {
-                        techniqueToUpdate.TechnicianNumber = TextBoxTechnicianNumber.Text;
-                        techniqueToUpdate.TechniqueName = TextBoxTechniqueName.Text;
-                        techniqueToUpdate.TechniqueModel = TextBoxTechniqueModel.Text;
-                        techniqueToUpdate.YearOfManufacture = TextBoxYearOfManufacture.Text;
-                        techniqueToUpdate.RentalCost = decimal.Parse(TextBoxRentalCost.Text);
-                        techniqueToUpdate.State_ID = (int)ComboBoxState.SelectedValue;
-
-                        context.SaveChanges();
-
-                        var index = Techniques.IndexOf(SelectedTechnique);
-                        Techniques[index] = techniqueToUpdate;
-                        MessageBox.Show("Техника успешно изменена!", "Успех");
-                    }
+                    MessageBox.Show($"Ошибка при редактировании техники: {ex.Message}");
                 }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show($"Ошибка при редактировании техники: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}");
+                MessageBox.Show("Выберите технику для редактирования!", "Ошибка");
             }
         }
 
         private void ButtonDelete_Click(object sender, RoutedEventArgs e)
         {
-            if (SelectedTechnique == null)
+            if (dgrdTechnique.SelectedItem is Technique selectedTechnique)
             {
-                MessageBox.Show("Выберите технику для удаления!", "Ошибка выбора");
-                return;
-            }
-
-            try
-            {
-                using (var context = new FitnesEntities1())
+                try
                 {
-                    var techniqueToDelete = context.Technique.Find(SelectedTechnique.ID_Technique);
-                    if (techniqueToDelete != null)
-                    {
-                        context.Technique.Remove(techniqueToDelete);
-                        context.SaveChanges();
-
-                        Techniques.Remove(SelectedTechnique);
-                        MessageBox.Show("Техника успешно удалена!", "Успех");
-                    }
+                    context.Technique.Remove(selectedTechnique);
+                    context.SaveChanges(); 
+                    LoadData(); 
+                    MessageBox.Show("Техника успешно удалена!", "Успех");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ошибка при удалении техники: {ex.Message}");
                 }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show($"Ошибка при удалении техники: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}");
+                MessageBox.Show("Выберите технику для удаления!", "Ошибка");
             }
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected void OnPropertyChanged(string propertyName) =>
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        private void dgrdTechnique_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (dgrdTechnique.SelectedItem is Technique selectedTechnique)
+            {
+                
+                TextBoxTechnicianNumber.Text = selectedTechnique.TechnicianNumber;
+                TextBoxTechniqueName.Text = selectedTechnique.TechniqueName;
+                TextBoxTechniqueModel.Text = selectedTechnique.TechniqueModel;
+                TextBoxYearOfManufacture.Text = selectedTechnique.YearOfManufacture;
+                TextBoxRentalCost.Text = selectedTechnique.RentalCost.ToString();
+                ComboBoxState.SelectedValue = selectedTechnique.State_ID;
+            }
+        }
+
+        private void ClearFields()
+        {
+            
+            TextBoxTechnicianNumber.Clear();
+            TextBoxTechniqueName.Clear();
+            TextBoxTechniqueModel.Clear();
+            TextBoxYearOfManufacture.Clear();
+            TextBoxRentalCost.Clear();
+            ComboBoxState.SelectedIndex = -1;
+        }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -201,12 +147,7 @@ namespace Fitnes
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            TextBoxTechnicianNumber.Text = null;
-            TextBoxTechniqueName.Text = null;
-            TextBoxTechniqueModel.Text = null;
-            TextBoxYearOfManufacture.Text = null;
-            TextBoxRentalCost.Text = null;
-            ComboBoxState.SelectedValue = null;
+            ClearFields(); 
         }
     }
 }

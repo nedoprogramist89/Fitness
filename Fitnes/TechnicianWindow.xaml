@@ -11,35 +11,33 @@
 
         <DockPanel LastChildFill="False" Background="#FFF8DC" Height="50" VerticalAlignment="Center" Grid.ColumnSpan="2">
             <Button
-IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
-ToolTip="MaterialDesignFloatingActionSecondaryButton"
-Width="55"
-Height="50"
-Click="Button_Click"
-   
-Background="#FCC874">
+                IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                ToolTip="MaterialDesignFloatingActionSecondaryButton"
+                Width="55"
+                Height="50"
+                Click="Button_Click"
+                Background="#FCC874">
                 <materialDesign:PackIcon Kind="ArrowLeft" />
             </Button>
 
             <TextBlock 
-           VerticalAlignment="Center" 
-           FontSize="16" 
-           FontWeight="SemiBold" 
-           Foreground="#CCA15D" 
-           Margin="10,0" ><Run Text="Просмотр технического обслуживания"/></TextBlock>
-
+                VerticalAlignment="Center" 
+                FontSize="16" 
+                FontWeight="SemiBold" 
+                Foreground="#CCA15D" 
+                Margin="10,0">
+                <Run Text="Просмотр технического обслуживания"/>
+            </TextBlock>
         </DockPanel>
 
-        <DataGrid Margin="0,0,0,20" Background="#FFE9A3"  IsReadOnly="true"
-                  ItemsSource="{Binding Maintenances}" AutoGenerateColumns="False" Grid.Row="1">
-
+        <DataGrid Margin="0,0,0,20" Background="#FFE9A3" IsReadOnly="true"
+                  x:Name="dgrdMaintenances" AutoGenerateColumns="False" Grid.Row="1">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Дата обслуживания" Binding="{Binding MaintenanceDate}"/>
                 <DataGridTextColumn Header="Тип работы" Binding="{Binding TypeOfWork}"/>
                 <DataGridTextColumn Header="Статус обслуживания" Binding="{Binding MaintenanceStatus.MaintenanceStatus1}"/>
                 <DataGridTextColumn Header="Техника" Binding="{Binding Technique.TechniqueName}"/>
-                </DataGrid.Columns>
-
+            </DataGrid.Columns>
         </DataGrid>
     </Grid>
 </Window>

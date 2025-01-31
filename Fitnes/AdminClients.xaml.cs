@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.Data.Entity;
 using System.Linq;
 using System.Windows;
@@ -8,47 +6,13 @@ using System.Windows.Controls;
 
 namespace Fitnes
 {
-    public partial class AdminClients : Window, INotifyPropertyChanged
+    public partial class AdminClients : Window
     {
-        private ObservableCollection<Clients> _clients;
-        private Clients _selectedClient;
-
-        public ObservableCollection<Clients> Clients
-        {
-            get => _clients;
-            set
-            {
-                _clients = value;
-                OnPropertyChanged(nameof(Clients));
-            }
-        }
-
-        public Clients SelectedClient
-        {
-            get => _selectedClient;
-            set
-            {
-                _selectedClient = value;
-                OnPropertyChanged(nameof(SelectedClient));
-               
-                if (_selectedClient != null)
-                {
-                    TextBoxCompanyName.Text = _selectedClient.CompanyName;
-                    TextBoxPhoneNumber.Text = _selectedClient.PhoneNumber;
-                    TextBoxAddress.Text = _selectedClient.Address;
-                    TextBoxEmail.Text = _selectedClient.Email;
-                    TextBoxContactPersonName.Text = _selectedClient.ContactPersonName;
-                    TextBoxContactPersonSurname.Text = _selectedClient.ContactPersonSurname;
-                    TextBoxContactPersonMiddlename.Text = _selectedClient.ContactPersonMiddlename;
-                    TextBoxContractNumber.Text = _selectedClient.ContractNumber.ToString();
-                }
-            }
-        }
+        private FitnesEntities1 _context = new FitnesEntities1(); 
 
         public AdminClients()
         {
             InitializeComponent();
-            DataContext = this;
             LoadData();
         }
 
@@ -56,15 +20,13 @@ namespace Fitnes
         {
             try
             {
-                using (var context = new FitnesEntities1())
-                {
-               
-                    Clients = new ObservableCollection<Clients>(context.Clients.ToList());
-                }
+                
+                _context.Clients.Load();
+                dgrdClients.ItemsSource = _context.Clients.Local; 
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка при загрузке данных: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}");
+                MessageBox.Show($"Ошибка при загрузке данных: {ex.Message}");
             }
         }
 
@@ -72,145 +34,125 @@ namespace Fitnes
         {
             try
             {
-             
-                if (string.IsNullOrWhiteSpace(TextBoxCompanyName.Text) || string.IsNullOrWhiteSpace(TextBoxPhoneNumber.Text) ||
-                    string.IsNullOrWhiteSpace(TextBoxAddress.Text) || string.IsNullOrWhiteSpace(TextBoxEmail.Text) ||
-                    string.IsNullOrWhiteSpace(TextBoxContactPersonName.Text) || string.IsNullOrWhiteSpace(TextBoxContactPersonSurname.Text) ||
-                    string.IsNullOrWhiteSpace(TextBoxContractNumber.Text))
+                
+                var newClient = new Clients
                 {
-                    MessageBox.Show("Заполните все обязательные поля!", "Ошибка ввода данных");
-                    return;
-                }
+                    CompanyName = TextBoxCompanyName.Text,
+                    PhoneNumber = TextBoxPhoneNumber.Text,
+                    Address = TextBoxAddress.Text,
+                    Email = TextBoxEmail.Text,
+                    ContactPersonName = TextBoxContactPersonName.Text,
+                    ContactPersonSurname = TextBoxContactPersonSurname.Text,
+                    ContactPersonMiddlename = TextBoxContactPersonMiddlename.Text,
+                    ContractNumber = int.Parse(TextBoxContractNumber.Text)
+                };
 
-                using (var context = new FitnesEntities1())
-                {
-                    var newClient = new Clients
-                    {
-                        CompanyName = TextBoxCompanyName.Text,
-                        PhoneNumber = TextBoxPhoneNumber.Text,
-                        Address = TextBoxAddress.Text,
-                        Email = TextBoxEmail.Text,
-                        ContactPersonName = TextBoxContactPersonName.Text,
-                        ContactPersonSurname = TextBoxContactPersonSurname.Text,
-                        ContactPersonMiddlename = TextBoxContactPersonMiddlename.Text,
-                        ContractNumber = int.Parse(TextBoxContractNumber.Text)
-                    };
+                _context.Clients.Add(newClient); 
+                _context.SaveChanges(); 
 
-                    context.Clients.Add(newClient);
-                    context.SaveChanges();
-
-                  
-                    Clients.Add(newClient);
-                    MessageBox.Show("Клиент успешно добавлен!", "Успех");
-                }
+                LoadData(); 
+                ClearFields(); 
+                MessageBox.Show("Клиент успешно добавлен!", "Успех");
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка при добавлении клиента: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}");
+                MessageBox.Show($"Ошибка при добавлении клиента: {ex.Message}");
             }
         }
 
         private void ButtonEdit_Click(object sender, RoutedEventArgs e)
         {
-            if (SelectedClient == null)
+            if (dgrdClients.SelectedItem is Clients selectedClient)
             {
-                MessageBox.Show("Выберите клиента для редактирования!", "Ошибка выбора");
-                return;
-            }
-
-            try
-            {
-               
-                if (string.IsNullOrWhiteSpace(TextBoxCompanyName.Text) || string.IsNullOrWhiteSpace(TextBoxPhoneNumber.Text) ||
-                    string.IsNullOrWhiteSpace(TextBoxAddress.Text) || string.IsNullOrWhiteSpace(TextBoxEmail.Text) ||
-                    string.IsNullOrWhiteSpace(TextBoxContactPersonName.Text) || string.IsNullOrWhiteSpace(TextBoxContactPersonSurname.Text) ||
-                    string.IsNullOrWhiteSpace(TextBoxContractNumber.Text))
+                try
                 {
-                    MessageBox.Show("Заполните все обязательные поля!", "Ошибка ввода данных");
-                    return;
+                    
+                    selectedClient.CompanyName = TextBoxCompanyName.Text;
+                    selectedClient.PhoneNumber = TextBoxPhoneNumber.Text;
+                    selectedClient.Address = TextBoxAddress.Text;
+                    selectedClient.Email = TextBoxEmail.Text;
+                    selectedClient.ContactPersonName = TextBoxContactPersonName.Text;
+                    selectedClient.ContactPersonSurname = TextBoxContactPersonSurname.Text;
+                    selectedClient.ContactPersonMiddlename = TextBoxContactPersonMiddlename.Text;
+                    selectedClient.ContractNumber = int.Parse(TextBoxContractNumber.Text);
+
+                    _context.SaveChanges(); 
+                    LoadData(); 
+                    MessageBox.Show("Клиент успешно изменен!", "Успех");
                 }
-
-                using (var context = new FitnesEntities1())
+                catch (Exception ex)
                 {
-                    var clientToUpdate = context.Clients.Find(SelectedClient.ID_Clients);
-                    if (clientToUpdate != null)
-                    {
-                        clientToUpdate.CompanyName = TextBoxCompanyName.Text;
-                        clientToUpdate.PhoneNumber = TextBoxPhoneNumber.Text;
-                        clientToUpdate.Address = TextBoxAddress.Text;
-                        clientToUpdate.Email = TextBoxEmail.Text;
-                        clientToUpdate.ContactPersonName = TextBoxContactPersonName.Text;
-                        clientToUpdate.ContactPersonSurname = TextBoxContactPersonSurname.Text;
-                        clientToUpdate.ContactPersonMiddlename = TextBoxContactPersonMiddlename.Text;
-                        clientToUpdate.ContractNumber = int.Parse(TextBoxContractNumber.Text);
-
-                        context.SaveChanges();
-
-                      
-                        var index = Clients.IndexOf(SelectedClient);
-                        Clients[index] = clientToUpdate;
-                        MessageBox.Show("Клиент успешно изменен!", "Успех");
-                    }
+                    MessageBox.Show($"Ошибка при редактировании клиента: {ex.Message}");
                 }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show($"Ошибка при редактировании клиента: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}");
+                MessageBox.Show("Выберите клиента для редактирования!", "Ошибка");
             }
         }
 
         private void ButtonDelete_Click(object sender, RoutedEventArgs e)
         {
-            if (SelectedClient == null)
+            if (dgrdClients.SelectedItem is Clients selectedClient)
             {
-                MessageBox.Show("Выберите клиента для удаления!", "Ошибка выбора");
-                return;
-            }
-
-            try
-            {
-                using (var context = new FitnesEntities1())
+                try
                 {
-                    var clientToDelete = context.Clients.Find(SelectedClient.ID_Clients);
-                    if (clientToDelete != null)
-                    {
-                        context.Clients.Remove(clientToDelete);
-                        context.SaveChanges();
-
-                      
-                        Clients.Remove(SelectedClient);
-                        MessageBox.Show("Клиент успешно удален!", "Успех");
-                    }
+                    _context.Clients.Remove(selectedClient); 
+                    _context.SaveChanges(); 
+                    LoadData(); 
+                    MessageBox.Show("Клиент успешно удален!", "Успех");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ошибка при удалении клиента: {ex.Message}");
                 }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show($"Ошибка при удалении клиента: {ex.Message}\n\nПодробности:\n{ex.InnerException?.Message}");
+                MessageBox.Show("Выберите клиента для удаления!", "Ошибка");
             }
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected void OnPropertyChanged(string propertyName) =>
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void dgrdClients_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            TextBoxCompanyName.Text = null;
-            TextBoxPhoneNumber.Text = null;
-            TextBoxAddress.Text = null;
-            TextBoxEmail.Text = null;
-            TextBoxContactPersonName.Text = null;
-            TextBoxContactPersonSurname.Text = null;
-            TextBoxContactPersonMiddlename.Text = null;
-            TextBoxContractNumber.Text = null;
+            if (dgrdClients.SelectedItem is Clients selectedClient)
+            {
+                
+                TextBoxCompanyName.Text = selectedClient.CompanyName;
+                TextBoxPhoneNumber.Text = selectedClient.PhoneNumber;
+                TextBoxAddress.Text = selectedClient.Address;
+                TextBoxEmail.Text = selectedClient.Email;
+                TextBoxContactPersonName.Text = selectedClient.ContactPersonName;
+                TextBoxContactPersonSurname.Text = selectedClient.ContactPersonSurname;
+                TextBoxContactPersonMiddlename.Text = selectedClient.ContactPersonMiddlename;
+                TextBoxContractNumber.Text = selectedClient.ContractNumber.ToString();
+            }
+        }
+
+        private void ClearFields()
+        {
+            
+            TextBoxCompanyName.Clear();
+            TextBoxPhoneNumber.Clear();
+            TextBoxAddress.Clear();
+            TextBoxEmail.Clear();
+            TextBoxContactPersonName.Clear();
+            TextBoxContactPersonSurname.Clear();
+            TextBoxContactPersonMiddlename.Clear();
+            TextBoxContractNumber.Clear();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            
             var adminWindow = new AdminWindow();
             adminWindow.Show();
             this.Close();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            ClearFields(); 
         }
     }
 }

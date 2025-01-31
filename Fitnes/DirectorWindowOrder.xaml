@@ -4,7 +4,6 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         Title="Просмотр заказов" WindowState="Maximized" Background="#FFFDEFD4" Height="1080" Width="1080">
     <Grid>
-       
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -12,27 +11,27 @@
 
         <DockPanel LastChildFill="False" Background="#FFF8DC" Height="50" VerticalAlignment="Center" Grid.ColumnSpan="2">
             <Button
-IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
-ToolTip="MaterialDesignFloatingActionSecondaryButton"
-Width="55"
-Height="50"
-Click="Button_Click"
-   
-Background="#FCC874">
+                IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                ToolTip="MaterialDesignFloatingActionSecondaryButton"
+                Width="55"
+                Height="50"
+                Click="Button_Click"
+                Background="#FCC874">
                 <materialDesign:PackIcon Kind="ArrowLeft" />
             </Button>
 
             <TextBlock 
-           VerticalAlignment="Center" 
-           FontSize="16" 
-           FontWeight="SemiBold" 
-           Foreground="#CCA15D" 
-           Margin="10,0" ><Run Text="Просмотр заказов"/></TextBlock>
-
+                VerticalAlignment="Center" 
+                FontSize="16" 
+                FontWeight="SemiBold" 
+                Foreground="#CCA15D" 
+                Margin="10,0">
+                <Run Text="Просмотр заказов"/>
+            </TextBlock>
         </DockPanel>
 
         <DataGrid Grid.Row="1" Margin="0,0,0,20" Background="#FFE9A3" IsReadOnly="true"
-                  ItemsSource="{Binding Orders}" AutoGenerateColumns="False">
+                  x:Name="dgrdOrders" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Номер заказа" Binding="{Binding OrderNumber}"/>
                 <DataGridTextColumn Header="Клиент" Binding="{Binding Clients.CompanyName}"/>
@@ -44,7 +43,6 @@ Background="#FCC874">
                 <DataGridTextColumn Header="Период аренды" Binding="{Binding RentalPeriod}"/>
                 <DataGridTextColumn Header="Сотрудник" Binding="{Binding Employees.EmployeeName}"/>
             </DataGrid.Columns>
-
         </DataGrid>
     </Grid>
 </Window>
